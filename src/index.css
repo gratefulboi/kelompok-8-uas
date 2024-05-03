@@ -119,3 +119,38 @@ body {
   justify-content: center;
   border-radius: 100%;
 }
+=======
+@keyframes marching-ants {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+.animate-marching-ants {
+  animation: marching-ants 4s linear infinite;
+  border: 2px dashed currentColor;
+  background: 
+    linear-gradient(45deg, black 25%, transparent 25%) -50px 0,
+    linear-gradient(-45deg, black 25%, transparent 25%) -50px 0,
+    linear-gradient(45deg, transparent 75%, black 75%) 50px 0,
+    linear-gradient(-45deg, transparent 75%, black 75%) 50px 0;
+  background-size: 100px 100px;
+  background-color: rgb(37, 35, 35);
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+.animate-gradient-animation {
+  animation: gradient-animation 5s ease infinite alternate ;
+  background-size: 200% 200%;
+}
