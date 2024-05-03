@@ -22,10 +22,6 @@
     "react-dom": "^18.2.0",
     "react-icons": "^5.2.0",
     "react-router-dom": "^6.23.0",
-<<<<<<< Updated upstream
-    "sort-by": "^0.0.2",
-=======
->>>>>>> Stashed changes
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1",
     "sort-by": "^1.2.0",
