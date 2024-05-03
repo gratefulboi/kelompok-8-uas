@@ -69,7 +69,13 @@ body {
   background-color: rgb(37, 35, 35);
 }
 
-@keyframes gradient-animation {
+
+.animate-gradient-preference {
+  animation: gradient-animation-preference 5s ease infinite alternate;
+  background-size: 200% 200%;
+}
+
+@keyframes gradient-animation-preference {
   0% {
     background-position: 100% 0%;
   }
@@ -78,9 +84,12 @@ body {
   }
 }
 
-.animate-gradient-animation {
-  animation: gradient-animation 5s ease infinite alternate ;
+.animate-gradient-preference {
+  animation: gradient-animation-preference 5s ease infinite alternate;
   background-size: 200% 200%;
+  background-image: linear-gradient(to right, #281E18, #000005);
 }
+
+
 
   

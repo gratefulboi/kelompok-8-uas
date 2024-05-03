@@ -5,8 +5,8 @@ export default function AboutUs() {
         <div className="relative min-h-screen">
             <div className="absolute inset-0 bg-gradient-animation h-full w-full"></div>
             <div className="relative z-10">
-                <div className="bg-gradient-to-r from-blue-500 to-green-500 animate-gradient-animation h-64 min-h-screen py-12">
-                    <h1 className="font-Unna text-3xl font-bold mb-6 text-center py-4">The Founder</h1>
+                <div className="h-64 min-h-screen py-12">
+                    <h1 className="font-Unna text-yellow-50 text-3xl font-bold mb-6 text-center py-4">The Founder</h1>
                     <hr className="w-1/3 mx-auto border-b-2 border-black opacity-40 mb-8" />
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
                         <PersonCard 
@@ -35,9 +35,9 @@ export default function AboutUs() {
                         />
                     </div>
                 </div>
-                <div className="bg-gradient-to-r from-slate-700 to-black-300 animate-gradient-animation py-8">
+                <div className="bg-gradient-to-r from-trueGray-900 to-black animate-gradient-preference py-8">
                     <div className="max-w-6xl mx-auto">
-                        <h2 className="text-3xl font-Unna text-white mb-4">References</h2>
+                        <h2 className="text-3xl font-Unna text-yellow-50 mb-4">References</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             <ReferenceItem title="Sumber" description="Indahnya negriku" />
                             <ReferenceItem title="Test!" description="Ku cinta aku terpnanah persona indonesia" />
@@ -45,7 +45,7 @@ export default function AboutUs() {
                             <ReferenceItem title="Siapa kita?" description="Goyang nasi padang pakai sambal randang" />
                         </div>
                     </div>
-                    <div className="text-center text-white mt-8">
+                    <div className="text-center text-yellow-50 mt-8">
                         <p className="text-sm">&copy; 2024 YourWebsite. All rights reserved.</p>
                     </div>
                 </div>
@@ -58,9 +58,9 @@ const PersonCard = ({ name, role, description, imageSrc }) => (
     <div className="cursor-default bg-white rounded-lg shadow-md overflow-hidden border-4 border-transparent animate-marching-ants duration-500 ease-linear">
         <img className="w-full h-40 object-cover" src={imageSrc} alt={name} />
         <div className="p-4">
-            <h2 className="text-lg font-Unna">{name}</h2>
-            <p className="font-serif text-base text-gray-600 mb-2">{role}</p>
-            <p className="text-sm text-gray-800">{description}</p>
+            <h2 className="text-lg text-yellow-50 font-Unna">{name}</h2>
+            <p className="font-serif text-yellow-50 text-base text-gray-600 mb-2">{role}</p>
+            <p className="text-sm text-yellow-50">{description}</p>
         </div>
     </div>
 );
