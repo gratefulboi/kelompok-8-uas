@@ -60,7 +60,7 @@ function Kuliner() {
                     <img src={img} alt={img} />
                     <br />
                     {idx === imageIndex && <h1 className="text-center text-3xl mb-2">{name[idx]}</h1>}
-                    {idx === imageIndex && <p className="flex text-center items-center justify-center border border-black border-solid p-4 h-48 mx-auto">{desc[idx]}</p>}
+                    {idx === imageIndex && <p className="description">{desc[idx]}</p>}
                 </div>
             ))}       
         </Slider>
