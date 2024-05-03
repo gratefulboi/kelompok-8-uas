@@ -59,7 +59,7 @@ function Kuliner() {
                 <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
                     <img src={img} alt={img} />
                     <br />
-                    {idx === imageIndex && <h1 className="text-center text-3xl mb-2">{name[idx]}</h1>}
+                    {idx === imageIndex && <h1 className="text-center text-3xl mb-2 heading">{name[idx]}</h1>}
                     {idx === imageIndex && <p className="description">{desc[idx]}</p>}
                 </div>
             ))}       

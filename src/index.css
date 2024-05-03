@@ -53,10 +53,10 @@ body {
 
 .Container {
   margin: 0rem auto;
-  padding: 50px;
+  padding: 46px;
   border-top: 4px;
   border-style: solid;
-  border-image: linear-gradient(to right, #FFFFF0, #754600) 1;
+  border-image: linear-gradient(to right, #754600, #F7EF8A, #754600) 1;
 }
 
 .slide img {
@@ -123,17 +123,22 @@ body {
   color: #FFFFF0;
 }
 
+.heading {
+  color: #FFFFF0;
+}
+
 .description {
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
-  border: 4px solid;
+  border: 2px solid;
   padding: 16px;
   height: 192px;
   margin-left: auto;
   margin-right: auto;
-  border-image: linear-gradient(to bottom, #FFFFF0, #754600) 1;
+  border-image: linear-gradient(to right, #754600, #F7EF8A, #754600) 1;
+  color: #FFFFF0;
 }
 
 @keyframes marching-ants {
