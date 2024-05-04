@@ -39,8 +39,8 @@ export default function AboutUs() {
                 </div>
                 <div className="bg-gradient-to-r from-trueGray-900 to-black animate-gradient-preference py-8">
                     <div className="max-w-6xl mx-auto">
-                        <h2 className="text-3xl font-Unna text-yellow-50 mb-4">References</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <h2 className="text-4xl font-Unna text-yellow-50 mb-4">References</h2>
+                        <div className="text-yellow-50 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             <ReferenceItem title="Sumber" description="Indahnya negriku" />
                             <ReferenceItem title="Test!" description="Ku cinta aku terpnanah persona indonesia" />
                             <ReferenceItem title="10 Dosa besar Jerome" description="Saham Kalbe bangkrut setelah colab sama jerome." />
@@ -68,8 +68,8 @@ const PersonCard = ({ name, role, description, imageSrc }) => (
 );
 
 const ReferenceItem = ({ title, description }) => (
-    <div className="bg-white p-4 rounded-lg shadow-md">
+    <div className="card border border-solid p-4 rounded-lg shadow-md">
         <h3 className="text-lg font-semibold mb-2">{title}</h3>
-        <p className="text-gray-700">{description}</p>
+        <p className="text-yellow-50 font-rubik">{description}</p>
     </div>
 );

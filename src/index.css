@@ -91,7 +91,7 @@ body {
 }
 
 .card{
-  border-image: linear-gradient(to right, #754600, #F7EF8A, #754600) 1;
+  border-image: linear-gradient(to right, #754600, #F7EF8A 70%, #754600) 1;
 
 }
 
