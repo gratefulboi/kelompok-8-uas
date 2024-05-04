@@ -9,7 +9,7 @@ export default function AboutUs() {
             <div className="relative z-10">
                 <div className="h-64 min-h-screen py-12">
                     <h1 className="font-Unna text-yellow-50 text-3xl font-bold mb-6 text-center py-4">The Founder</h1>
-                    <hr className="card w-1/3 mx-auto border-b-2 border-black opacity-40 mb-8" />
+                    <hr className="card w-1/3 mx-auto border-b-2 border-black opacity-70 mb-8" />
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
                         <PersonCard 
                             name="Bryan Yung"
