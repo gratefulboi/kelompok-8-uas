@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import danauToba from '../assets/danauToba.jpeg';
 import danauToba2 from '../assets/danauToba2.jpg';
 
+// Initialize AOS
+AOS.init({ once: true });
+
 // Function to generate a set of boxes
 function BoxSet({ headerText, imageSrc, text1, text2, text3, imageSrc2, imageSrc3 }) {
+  useEffect(() => {
+    AOS.refresh();
+  }, []);
+
   return (
     <>
       {/* Header */}
-      <div className="text-center">
+      <div className="text-center" data-aos="fade-up">
         <div className="relative inline-block mb-1">
           <h1 className="text-5xl font-bold inline-block">{headerText}</h1>
           <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-800 mt-1"></div>
@@ -15,7 +22,7 @@ function BoxSet({ headerText, imageSrc, text1, text2, text3, imageSrc2, imageSrc
       </div>
 
       {/* First box */}
-      <div className="container mx-auto mt-4 relative pb-4">
+      <div className="container mx-auto mt-4 relative pb-4" data-aos="fade-up">
         <div className="w-full p-4 bg-gray-200 border border-gray-400" style={{ paddingBottom: '37.5%', position: 'relative', overflow: 'hidden' }}>
           {/* Content of the first box */}
           <img src={imageSrc} alt="" className="absolute top-0 left-0 w-full h-full object-cover" />
@@ -27,7 +34,7 @@ function BoxSet({ headerText, imageSrc, text1, text2, text3, imageSrc2, imageSrc
       </div>
 
       {/* Second box */}
-      <div className="container mx-auto mt-4 flex">
+      <div className="container mx-auto mt-4 flex" data-aos="fade-up">
         <div className="w-2/3 p-4 bg-blue-200 border border-blue-400 mr-4">
           {/* Content of the second box */}
           <p>{text1}</p>
@@ -40,7 +47,7 @@ function BoxSet({ headerText, imageSrc, text1, text2, text3, imageSrc2, imageSrc
       </div>
       
       {/* Fourth box */}
-      <div className="container mx-auto mt-4 flex">
+      <div className="container mx-auto mt-4 flex" data-aos="fade-up">
         <div className="w-1/3 p-4 bg-yellow-200 border border-yellow-400 mr-4 relative overflow-hidden">
           {/* Content of the fourth box */}
           <img src={imageSrc3} alt="" className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-105" />
