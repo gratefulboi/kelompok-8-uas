@@ -46,7 +46,9 @@ export default function Header() {
                                 <AvatarImage src="https://source.unsplash.com/aerial-photo-of-green-trees-near-mountain-under-cloudy-sky-8N30QSbW5ds" />
                                 <AvatarFallback>Kelompok 8 - Sumatera Utara</AvatarFallback>
                             </Avatar>
-                            <h1 className='glowing font-unna text-5xl font-bold mx-2'>DjedjakSoematra</h1>
+                            <Link to="/">
+                                <h1 className='glowing font-unna text-5xl font-bold mx-2'>DjedjakSoematra</h1>
+                            </Link>
                         </div>
                         <NavigationMenuItem>
                             <div className={styleClassLink}>

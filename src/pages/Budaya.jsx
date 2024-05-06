@@ -31,7 +31,7 @@ import audioDoli from '../assets/audio/Dolidoli.mp3'
 
 const styleSlider = 'w-1/2'
 const styleHoverSlider = 'absolute bottom-0 transform translate-y-full group-hover:translate-y-0 transition-transform duration-200 flex justify-center w-full bg-hijau1 p-2 text-justify'
-const styleMusic = 'bg-krem p-4 rounded-t-2xl'
+const styleMusic = 'p-4 rounded-t-2xl'
 
 export default function Budaya() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -42,6 +42,20 @@ export default function Budaya() {
     balobat: new Audio(audioBalobat),
     doli: new Audio(audioDoli),
   });
+
+  const [selectedCard, setSelectedCard] = useState(null);
+
+  const handleCardClick = (audioKey) => {
+    if (selectedCard === audioKey) {
+      setSelectedCard(null);
+    } else {
+      setSelectedCard(audioKey);
+    }
+  };
+
+  const getCardClasses = (audioKey) => {
+    return `m-10 bg-krem cursor-pointer rounded-2xl max-w-sm max-h-xs transition-all duration-500 ease-in-out  ${selectedCard === audioKey ? 'transform scale-110 bg-hijau1' : ''}`;
+  };
 
   const handleImageClick = (audioKey) => {
     const audioRef = audioRefs.current[audioKey];
@@ -130,7 +144,7 @@ export default function Budaya() {
         className='my-10'
         data-aos="fade-up"
       >
-        <div className='swiper-button-prev text-krem bg-biru1'></div>
+        <div className='swiper-button-prev text-krem bg-hijau1'></div>
             <SwiperSlide className={styleSlider}>
               <div className="relative group overflow-hidden rounded-t-2xl">
                 <img src={gambarBajuBatakToba} className='object-cover w-full h-full'/>
@@ -175,14 +189,14 @@ export default function Budaya() {
               </div>
               <h1 className="flex justify-center bg-krem rounded-b-2xl">Suku Angkola</h1>
             </SwiperSlide>
-        <div className='swiper-button-next text-krem bg-biru1'></div>
+        <div className='swiper-button-next text-krem bg-hijau   1'></div>
         </Swiper>
 
         <h1 className='flex justify-center items-center m-10 text-3xl font-rubik' data-aos='fade-up'>Alat Musik</h1>
-        <div className='flex flex-row flex-wrap justify-center space-y'>
-          <Card className='m-10 rounded-2xl max-w-sm max-h-xs' data-aos='fade-left'>
-            <CardContent className='bg-krem p-4 rounded-t-2xl'>
-                <CardTitle className='flex items-center justify-center' data-aos='fade-left'>Gordang Sambilan</CardTitle>
+        <div className='flex flex-row flex-wrap justify-center space-y' data-aos='fade-up'>
+          <Card className={getCardClasses('gordang')} onClick={() => handleCardClick('gordang')}>
+            <CardContent className={styleMusic}>
+                <CardTitle className='flex items-center justify-center'>Gordang Sambilan</CardTitle>
                 <p className="text-justify">Berasal dari Suku Mandailing. Terdiri atas 9 gendang dimana setiap gendang memiliki ukuran dan panjang diameter yang berbeda sehingga karakter suara yang berbeda. Gordang Sambilan dimainkan saat ada upacara adat misal seperti pernikahan atau pemakaman diperlukan bisa sampai 6 orang untuk memainkannya.</p>
             </CardContent>
             <div className='w-full'>
@@ -190,7 +204,7 @@ export default function Budaya() {
             </div>
           </Card>
 
-          <Card className='m-10 rounded-2xl max-w-sm max-h-xs' data-aos='fade-left'>
+          <Card className={getCardClasses('taganing')} onClick={() => handleCardClick('taganing')}>
             <CardContent className={styleMusic}>
                 <CardTitle className='flex items-center justify-center'>Taganing</CardTitle>
                 <p className="text-justify">Berasal dari Suku Batak Toba. Terdiri atas 5 gendang yang masing-masing memiliki nada yang berbeda. Dimainkan dengan cara dipukul dengan tangan atau alat khusus. Taganing memiliki peranan sangat penting dalam penyelenggaraan pertunjukan musik Gondang karena sebagai pilar utama pembentuk struktur musik Gondang.</p>
@@ -200,7 +214,7 @@ export default function Budaya() {
             </div>
           </Card>
 
-          <Card className='m-10 rounded-2xl max-w-sm max-h-xs' data-aos='fade-left'>
+          <Card className={getCardClasses('faritia')} onClick={() => handleCardClick('faritia')}>
             <CardContent className={styleMusic}>
                 <CardTitle className='flex items-center justify-center'>Faritia</CardTitle>
                 <p className="text-justify">Berasal dari Suku Nias. Memiliki bentuk mirip dong dengan diameter yang lebih kecil sekitar 20cm hingga 30cm, ketebalannya hingga 4cm, dan bagian tengah yang menonjol. Dimainkan dengan cara dipukul menggunakan pemukul bagian tengah atau tepinya. Faritia biasanya dimainkan sebagai bagian dari ansambel musik khas Nias. </p>
@@ -210,7 +224,7 @@ export default function Budaya() {
             </div>
           </Card>
 
-          <Card className='m-10 rounded-2xl max-w-sm max-h-xs' data-aos='fade-right'>
+          <Card className={getCardClasses('balobat')} onClick={() => handleCardClick('balobat')}>
             <CardContent className={styleMusic}>
                 <CardTitle className='flex items-center justify-center'>Balobat</CardTitle>
                 <p className="text-justify">Berasal dari Suku Karo. Berbentuk menyerupai seruling rekorder, namun dengan ukuran yang lebih kecil serta nada yang berbeda. Cara memainkan alat musik ini dengan meniup menggunakan mulut untuk menghasilkan suara melalui lubang-lubang di bambu. Balobat dapat dimainkan secara solo maupun dalam kelompok musik tradisional.</p>
@@ -220,7 +234,7 @@ export default function Budaya() {
             </div>
           </Card>
 
-          <Card className='m-10 rounded-2xl max-w-sm max-h-xs' data-aos='fade-right'>
+          <Card className={getCardClasses('doli')} onClick={() => handleCardClick('doli')}>
             <CardContent className={styleMusic}>
                 <CardTitle className='flex items-center justify-center'>Doli-Doli</CardTitle>
                 <p className="text-justify">Berasal dari Suku Nias. Berbentuk menyerupai Kolintang, namun dengan ukuran yang lebih kecil. Cara memainkannya dipukul, ketika dipukul akan menghasilkan pola bunyi yang khas. Umumnya dimainkan sebagai sarana hiburan saat di ladang, dalam suasana dukacita/kesepian, dan upacara adat dalam konteks keagamaan. </p>
