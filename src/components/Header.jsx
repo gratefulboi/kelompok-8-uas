@@ -48,7 +48,7 @@ export default function Header() {
                             </Avatar>
                             <Link to="/">
                                 <h1 className='glowing font-unna text-5xl font-bold mx-2'>DjedjakSoematra</h1>
-                            </Link>
+                            </Link>     
                         </div>
                         <NavigationMenuItem>
                             <div className={styleClassLink}>

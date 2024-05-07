@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import {
   Card,
   CardContent,
@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/card"
 import {Swiper, SwiperSlide} from 'swiper/react'
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules'
-import AOS from 'aos'
+import { useLocation } from 'react-router-dom'
 import 'swiper/css/bundle'
 
 import gambarMain from '../assets/budaya.jpg'
@@ -46,18 +46,12 @@ export default function Budaya() {
   const [selectedCard, setSelectedCard] = useState(null);
 
   const handleCardClick = (audioKey) => {
-    if (selectedCard === audioKey) {
-      setSelectedCard(null);
-    } else {
-      setSelectedCard(audioKey);
+    if (selectedCard && selectedCard !== audioKey) {
+      audioRefs.current[selectedCard].pause();
     }
-  };
 
-  const getCardClasses = (audioKey) => {
-    return `m-10 bg-krem cursor-pointer rounded-2xl max-w-sm max-h-xs transition-all duration-500 ease-in-out  ${selectedCard === audioKey ? 'transform scale-110 bg-hijau1' : ''}`;
-  };
+    setSelectedCard(selectedCard === audioKey ? null : audioKey);
 
-  const handleImageClick = (audioKey) => {
     const audioRef = audioRefs.current[audioKey];
     if (audioRef.paused) {
       audioRef.play();
@@ -68,6 +62,19 @@ export default function Budaya() {
     }
   };
 
+  const getCardClasses = (audioKey) => {
+    return `m-10 bg-krem cursor-pointer rounded-2xl max-w-sm max-h-xs transition-all duration-500 ease-in-out  ${selectedCard === audioKey ? 'transform scale-110 bg-hijau1' : ''}`;
+  };
+
+  const location = useLocation();
+  useEffect(() => {
+    return () => {
+      Object.values(audioRefs.current).forEach((audio) => {
+        audio.pause();
+      });
+      setIsPlaying(false);
+    };
+  }, [location]);
 
   return (
     <>
@@ -189,7 +196,7 @@ export default function Budaya() {
               </div>
               <h1 className="flex justify-center bg-krem rounded-b-2xl">Suku Angkola</h1>
             </SwiperSlide>
-        <div className='swiper-button-next text-krem bg-hijau   1'></div>
+        <div className='swiper-button-next text-krem bg-hijau1'></div>
         </Swiper>
 
         <h1 className='flex justify-center items-center m-10 text-3xl font-rubik' data-aos='fade-up'>Alat Musik</h1>
