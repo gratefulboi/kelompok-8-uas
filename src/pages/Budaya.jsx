@@ -3,7 +3,6 @@ import {
   CardContent,
   CardTitle,
 } from "@/components/ui/card"
-import {Swiper, SwiperSlide, EffectCoverFlow, Pagination, Navigation} from 'swiper'
 import 'swiper/css/bundle'
 
 import gambarMain from '../assets/budaya.jpg'
