@@ -17,7 +17,10 @@ import tamanLumbini from '../assets/tamanLumbini.jpg';
 import tamanLumbini2 from '../assets/tamanLumbini2.jpg';
 import pulauBerhala from '../assets/pulauBerhala.jpg';
 import pulauBerhala2 from '../assets/pulauBerhala2.jpg';
-
+import bukitHolbung from '../assets/bukitHolbung.jpg';
+import bukitHolbung2 from '../assets/bukitHolbung2.jpg';
+import aekNauli from '../assets/elephantCamp.jpg';
+import aekNauli2 from '../assets/elephantCamp2.jpg';
 
 // Initialize AOS
 AOS.init({ once: true });
@@ -187,21 +190,35 @@ export default function Wisata() {
           imageSrc={danauToba}
           imageSrc2={pulauBerhala}
           imageSrc3={pulauBerhala2}
-          text1="Taman Alam Lumbini adalah sebuah taman yang terletak di Desa Dolat Rayat, Kota Brastagi, Sumatera Utara. Taman ini merupakan replika dari Pagoda Shwedagon yang berada di negara Myanmar. Dengan luas kawasan kurang lebih 3 hektar, taman ini dipusatkan sebagai tempat peribadatan dan wisata religi agama Buddha. Bangunan dengan tinggi 46,8 meter, panjang 68 meter, dan lebar 68 meter ini menjadi salah satu replika Pagoda Shwedagon terbesar di luar Negara Myanmar."
-          text2="Nama Lumbini merujuk pada taman tempat kelahiran dari Sang Buddha atau Siddartha Gautama. Taman ini memiliki berbagai daya tarik, di antaranya kemegahan bangunan Pagoda Emas yang merupakan replika dari Pagoda Shwedagon Myanmar. Selain itu, letaknya yang berada di dataran tinggi membuat taman ini memiliki suasana yang sejuk. Hal ini didukung dengan area taman yang asri dan alami. Melihat Kemegahan dan Keindahan Pagoda Pagoda Emas selain sebagai tempat ibadah umat Buddha, kuil ini juga terbuka untuk umum sebagai tempat wisata."
+          text1="Pulau Berhala adalah sebuah pulau yang terletak di Selat Malaka dan masih termasuk dalam wilayah administratif provinsi Jambi. Pulau ini memiliki luas sekitar dan merupakan pulau terluar Indonesia di Selat Malaka dan berbatasan dengan negara Malaysia. Pulau ini dijaga oleh Tentara Nasional Indonesia (TNI) karena statusnya sebagai pulau terluar. Pulau Berhala memiliki topografi bergunung dengan hutan lebat dan pantai yang putih bersih."
+          text2="Pulau Berhala menawarkan pantai eksotis dengan pasir putih yang bersih. Pulau ini memiliki pemandangan khas dengan pantai-pantai di sekitar Riau yang berbatu besar dan bersih. Pada awal dan akhir tahun, pantai Pulau Berhala menjadi tempat persinggahan penyu untuk bertelur. Pulau ini juga menyimpan warisan berupa benteng kuno yang dibangun oleh Jepang serta meriam peninggalan masa penjajahan Belanda."
           text3="Ini mau video"
         />
       </div>
 
-      {/*Pulau Berhala*/}
+      
+      {/*Bukit Holbung*/}
       <div className="mt-20"> {/* Add margin top to create space between BoxSets */}
         <BoxSet 
-          headerText="Pulau Berhala"
+          headerText="Bukit Holbung"
           imageSrc={danauToba}
-          imageSrc2={pulauBerhala}
-          imageSrc3={pulauBerhala2}
-          text1="Pulau Berhala adalah sebuah pulau yang terletak di Selat Malaka dan masih termasuk dalam wilayah administratif provinsi Jambi. Pulau ini memiliki luas sekitar dan merupakan pulau terluar Indonesia di Selat Malaka dan berbatasan dengan negara Malaysia. Pulau ini dijaga oleh Tentara Nasional Indonesia (TNI) karena statusnya sebagai pulau terluar. Pulau Berhala memiliki topografi bergunung dengan hutan lebat dan pantai yang putih bersih."
-          text2="Pulau Berhala menawarkan pantai eksotis dengan pasir putih yang bersih. Pulau ini memiliki pemandangan khas dengan pantai-pantai di sekitar Riau yang berbatu besar dan bersih. Pada awal dan akhir tahun, pantai Pulau Berhala menjadi tempat persinggahan penyu untuk bertelur. Pulau ini juga menyimpan warisan berupa benteng kuno yang dibangun oleh Jepang serta meriam peninggalan masa penjajahan Belanda."
+          imageSrc2={bukitHolbung}
+          imageSrc3={bukitHolbung2}
+          text1="Bukit Holbung, juga dikenal sebagai Bukit Teletubbies oleh masyarakat setempat, adalah sebuah destinasi wisata alam yang terletak di Dolok Raja, Kecamatan Harian, Kabupaten Samosir, Sumatera Utara. Bukit ini menawarkan pemandangan yang spektakuler, udara yang segar, dan pemandangan alam yang memesona bagi para pengunjung. Dari puncak bukit, Anda akan disuguhi panorama alam yang luar biasa, termasuk hamparan perbukitan hijau yang bergelombang dan pemandangan Danau Toba."
+          text2="Salah satu daya tarik utama Bukit Holbung adalah pemandangannya yang menakjubkan. Terutama saat matahari terbit atau terbenam, pemandangan ini menjadi lebih dramatis dengan warna-warna yang indah. Bagi yang suka petualangan, Bukit Holbung juga menawarkan jalur hiking yang menantang. Selain mendaki ke puncak bukit, mayoritas pengunjung juga mengunjungi Bukit ini untuk berkemah. Menghabiskan malam di kawasan bukit ini dengan berkemah adalah pengalaman yang sangat berkesan."
+          text3="Ini mau video"
+        />
+      </div>
+
+      {/*Aek Nauli*/}
+      <div className="mt-20"> {/* Add margin top to create space between BoxSets */}
+        <BoxSet 
+          headerText="Aek Nauli"
+          imageSrc={danauToba}
+          imageSrc2={aekNauli}
+          imageSrc3={aekNauli2}
+          text1="Aek Nauli Elephant Conservation Unit adalah sebuah kawasan konservasi gajah yang terletak di Sumatera Utara. Kawasan ini berada pada poros Danau Toba dan menjadi destinasi wisata ekologi melalui program kawasan hutan dengan tujuan khusus. Di sini, pengunjung dapat mengikuti program wisata ilmiah, aktivitas ekowisata, dan melihat lebih dekat kehidupan satwa seperti Kera, Siamang dan Gajah."
+          text2="Salah satu daya tarik utama Aek Nauli Elephant Conservation Unit adalah kegiatan menarik yang ditawarkan. Pengunjung dapat mempelajari tentang Lebah Madu mulai dari jenis hingga proses budidaya lebah secara langsung. Selain itu, melihat dan bercengkrama dengan Gajah Sumatera pasti akan menyenangkan, seperti ikut memberi makan dan memandikan gajah-gajah. Hingga kini, diketahui ada beberapa ekor Gajah yang semuanya sudah memiliki nama. Sebagai kawasan konservasi, pengunjung juga dapat mengikuti program wisata ilmiah terkait kehutanan karena di sini terdapat pusat arboretum. Di dalam arboretum ini, tersimpan berbagai koleksi tanaman langka yang didatangkan dari berbagai daerah."
           text3="Ini mau video"
         />
       </div>
