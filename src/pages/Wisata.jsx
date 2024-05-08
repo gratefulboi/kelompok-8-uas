@@ -1,22 +1,22 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css'
-import danauToba from '../assets/Images/danauToba.jpeg';
-import danauToba2 from '../assets/Images/danauToba2.jpg';
-import gunungSibayak from '../assets/Images/gunungSibayak.jpg';
-import gunungSibayak2 from '../assets/Images/gunungSibayak2.jpg';
-import bukitLawang from '../assets/Images/BukitLawang.jpg';
-import bukitLawang2 from '../assets/Images/BukitLawang2.jpg';
-import airTerjunSipisoPiso from '../assets/Images/AirTerjunSipisoPiso.jpg';
-import airTerjunSipisoPiso2 from '../assets/Images/AirTerjunSipisoPiso2.jpg';
-import guaKelelawar from '../assets/Images/guaKelelawar.jpg';
-import guaKelelawar2 from '../assets/Images/guaKelelawar2.jpg';
-import bukitGundaling from '../assets/Images/bukitGundaling.jpg';
-import bukitGundaling2 from '../assets/Images/bukitGundaling2.jpg';
-import tamanLumbini from '../assets/Images/tamanLumbini.jpg';
-import tamanLumbini2 from '../assets/Images/tamanLumbini2.jpg';
-import pulauBerhala from '../assets/Images/pulauBerhala.jpg';
-import pulauBerhala2 from '../assets/Images/pulauBerhala2.jpg';
+import danauToba from '../assets/Wisata/danauToba.jpeg';
+import danauToba2 from '../assets/Wisata/danauToba2.jpg';
+import gunungSibayak from '../assets/Wisata/gunungSibayak.jpg';
+import gunungSibayak2 from '../assets/Wisata/gunungSibayak2.jpg';
+import bukitLawang from '../assets/Wisata/BukitLawang.jpg';
+import bukitLawang2 from '../assets/Wisata/BukitLawang2.jpg';
+import airTerjunSipisoPiso from '../assets/Wisata/AirTerjunSipisoPiso.jpg';
+import airTerjunSipisoPiso2 from '../assets/Wisata/AirTerjunSipisoPiso2.jpg';
+import guaKelelawar from '../assets/Wisata/guaKelelawar.jpg';
+import guaKelelawar2 from '../assets/Wisata/guaKelelawar2.jpg';
+import bukitGundaling from '../assets/Wisata/bukitGundaling.jpg';
+import bukitGundaling2 from '../assets/Wisata/bukitGundaling2.jpg';
+import tamanLumbini from '../assets/Wisata/tamanLumbini.jpg';
+import tamanLumbini2 from '../assets/Wisata/tamanLumbini2.jpg';
+import pulauBerhala from '../assets/Wisata/pulauBerhala.jpg';
+import pulauBerhala2 from '../assets/Wisata/pulauBerhala2.jpg';
 
 
 // Initialize AOS
