@@ -7,7 +7,7 @@ import {
   } from "@/components/ui/navigation-menu"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
-const styleClassLink = 'font-rubikBold cursor-pointer relative mx-5 py-1 px-3 text-black transition ease-out border-b-0 hover:border hover:text-white hover:shadow-[10px_7px_black] hover:scale-110 rounded-2xl '
+const styleClassLink = 'font-rubikBold cursor-pointer relative mx-5 py-1 px-3 text-gading transition ease-out border-b-0 hover:border hover:text-coklat1 hover:shadow-[10px_7px_black] hover:bg-gading hover:scale-110 rounded-2xl'
 
 export default function Header() {
     const [bgColor, setBgColor] = useState(''); 
@@ -16,7 +16,7 @@ export default function Header() {
         const handleScroll = () => {
             let currentScroll = window.pageYOffset;
             if (currentScroll > 100) {
-                setBgColor('#41C9E2'); 
+                setBgColor('#571E03'); 
             } else {
                 setBgColor(''); 
             }
@@ -47,7 +47,7 @@ export default function Header() {
                                 <AvatarFallback>Kelompok 8 - Sumatera Utara</AvatarFallback>
                             </Avatar>
                             <Link to="/">
-                                <h1 className='glowing font-unna text-5xl font-bold mx-2'>DjedjakSoematra</h1>
+                                <h1 className='glowing font-unna text-5xl text-gading font-bold mx-2'>DjedjakSoematra</h1>
                             </Link>     
                         </div>
                         <NavigationMenuItem>

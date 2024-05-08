@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import {AboutUs, Budaya, Home, Kuliner, Wisata} from './pages/indexpages.js'
 import Header from './components/Header.jsx'
+import Footer from './components/Footer.jsx'
 import './index.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css'
@@ -37,6 +38,7 @@ function App() {
           <Route path="/wisata" element={<Wisata />} />
           <Route path="/aboutus" element={<AboutUs />} />
         </Routes>
+        <Footer />
       </Router>
     </React.StrictMode>
   );

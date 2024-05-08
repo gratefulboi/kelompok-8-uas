@@ -5,13 +5,15 @@ import { Link } from "react-router-dom"
 
 import DanauToba from "../assets/Wisata/DanauToba.jpg"
 
+import LompatBatu from '../assets/Budaya/budaya.jpg'
+
 import Naniura from "../assets/Kuliner/Naniura.jpg"
 
 function home () {
   return (
     <div>
 
-      <div className="videoContainer"  data-aos="fade-up">
+      <div className="videoContainer"  data-aos="zoom-out-up">
         <Link to="https://youtu.be/IrcoYCD9-nM?si=vSXVdyEtetG4z0Gc">
           <video autoPlay loop className="border border-b-2 border-black flex items-center justify-center HomeVideo" src={HomeVid} />
           
@@ -30,7 +32,7 @@ function home () {
 
       <Link to="/Budaya">
         <div className="m-10 border border-black border-2 cardImg flex justify-between"  data-aos="fade-up">
-          <img src={Naniura} className="w-96"/>
+            <img src={LompatBatu} className="w-96"/>      
           <p className="flex items-center justify-center m-10 px-10 text-2xl text-justify">Memperkenalkan anda ke beragam budayanya, di mana Gordang Sambilan tidak hanya sekedar alat musik, tetapi juga simbol dari kekayaan tradisi yang mengalun dalam setiap irama. Mulai perjalanan budaya Anda dengan kami dan biarkan semangat, serta harmoni Gordang Sambilan membawa Anda ke dalam inti dari warisan yang tak ternilai, membuka pintu ke pengalaman yang akan menggema hati Anda.</p>
         </div>
       </Link>

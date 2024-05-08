@@ -31,7 +31,8 @@
 
 body {
     margin : 0;
-    background-color: #ACE2E1;
+    background-color: #281E18;
+    text-color: white;
     font-family: 'Unna', 'Rubik', 'RubikBold';
 }
 
@@ -57,7 +58,7 @@ body {
 
 .HomeVideo {
   width: 100%;
-  height: 550px;
+  height: 720px;
   object-fit: fill;
 }
 
