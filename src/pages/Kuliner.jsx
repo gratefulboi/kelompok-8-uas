@@ -54,6 +54,7 @@ function Kuliner() {
 
   return (
     <div className="Container">
+      <div data-aos="fade-up">
         <Slider {...options}>
             {images.map((img, idx) => (
                 <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
@@ -64,6 +65,8 @@ function Kuliner() {
                 </div>
             ))}       
         </Slider>
+      </div>
+        
     </div>
   )
 }
