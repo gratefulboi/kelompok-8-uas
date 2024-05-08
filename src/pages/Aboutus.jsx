@@ -12,11 +12,11 @@ export default function AboutUs() {
         <div className="relative min-h-screen">
             <div className="absolute inset-0 bg-gradient-animation h-full w-full"></div>
             <div className="relative z-10">
-                <div className="bg-gradient-to-r from-blue-500 to-green-500 animate-gradient-animation h-64 min-h-screen py-12">
-                    <h1 className="font-Unna text-3xl font-bold mb-6 text-center py-4">The Founder</h1>
-                    <hr className="w-1/3 mx-auto border-b-2 border-black opacity-40 mb-8" />
+                <div className="h-64 min-h-screen py-12" data-aos="fade-up">
+                    <h1 className="font-Unna text-yellow-50 text-3xl font-bold mb-6 text-center py-4">The Founder</h1>
+                    <hr className="card w-1/3 mx-auto border-b-2 border-black opacity-70 mb-8" />
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-                    <PersonCard 
+                        <PersonCard 
                             name="Bryan Yung"
                             role="Leader Gacor"
                             description="Seorang mahasiswa UMN asal korea yang sedang mencari uang serta jati diri untuk bertahan hidup di dunia yang bahkan tidak menyediakan satu wanita pun untuknya"
@@ -42,8 +42,8 @@ export default function AboutUs() {
                         />
                     </div>
                 </div>
-                <div className="bg-gradient-to-r from-slate-700 to-black-300 animate-gradient-animation py-8">
-                    <div className="max-w-6xl mx-auto">
+                <div className="bg-gradient-to-r from-trueGray-900 to-black animate-gradient-preference py-4 mx-auto flex justify-center items-center" data-aos="fade-up">
+                    <div className="max-w-6xl mx-auto px-8">
                         <div className="text-yellow-50  p-1 flex flex-col md:flex-row justify-start items-start">
                             <div className="text-justify w-5/12 mr-20">
                                 <ReferenceItem title="Djedjak Soematra" description="Kami dasdsamilih membuat website dengan tema Sumatera Utara, karena menurut kami provinsi ini memiliki banyak keberagaman yang dapat dikunjungi oleh para wisatawan" />
