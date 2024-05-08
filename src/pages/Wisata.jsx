@@ -1,29 +1,33 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css'
-import danauToba from '../assets/danauToba.jpeg';
-import danauToba2 from '../assets/danauToba2.jpg';
-import gunungSibayak from '../assets/gunungSibayak.jpg';
-import gunungSibayak2 from '../assets/gunungSibayak2.jpg';
-import bukitLawang from '../assets/BukitLawang.jpg';
-import bukitLawang2 from '../assets/BukitLawang2.jpg';
-import airTerjunSipisoPiso from '../assets/AirTerjunSipisoPiso.jpg';
-import airTerjunSipisoPiso2 from '../assets/AirTerjunSipisoPiso2.jpg';
-import guaKelelawar from '../assets/guaKelelawar.jpg';
-import guaKelelawar2 from '../assets/guaKelelawar2.jpg';
-import bukitGundaling from '../assets/bukitGundaling.jpg';
-import bukitGundaling2 from '../assets/bukitGundaling2.jpg';
-import tamanLumbini from '../assets/tamanLumbini.jpg';
-import tamanLumbini2 from '../assets/tamanLumbini2.jpg';
-import pulauBerhala from '../assets/pulauBerhala.jpg';
-import pulauBerhala2 from '../assets/pulauBerhala2.jpg';
+import danauToba from '../assets/Wisata/danauToba.jpeg';
+import danauToba2 from '../assets/Wisata/danauToba2.jpg';
+import gunungSibayak from '../assets/Wisata/gunungSibayak.jpg';
+import gunungSibayak2 from '../assets/Wisata/gunungSibayak2.jpg';
+import bukitLawang from '../assets/Wisata/BukitLawang.jpg';
+import bukitLawang2 from '../assets/Wisata/BukitLawang2.jpg';
+import airTerjunSipisoPiso from '../assets/Wisata/AirTerjunSipisoPiso.jpg';
+import airTerjunSipisoPiso2 from '../assets/Wisata/AirTerjunSipisoPiso2.jpg';
+import guaKelelawar from '../assets/Wisata/guaKelelawar.jpg';
+import guaKelelawar2 from '../assets/Wisata/guaKelelawar2.jpg';
+import bukitGundaling from '../assets/Wisata/bukitGundaling.jpg';
+import bukitGundaling2 from '../assets/Wisata/bukitGundaling2.jpg';
+import tamanLumbini from '../assets/Wisata/tamanLumbini.jpg';
+import tamanLumbini2 from '../assets/Wisata/tamanLumbini2.jpg';
+import pulauBerhala from '../assets/Wisata/pulauBerhala.jpg';
+import pulauBerhala2 from '../assets/Wisata/pulauBerhala2.jpg';
+import bukitHolbung from '../assets/Wisata/bukitHolbung.jpg';
+import bukitHolbung2 from '../assets/Wisata/bukitHolbung2.jpg';
+import aekNauli from '../assets/Wisata/elephantCamp.jpg';
+import aekNauli2 from '../assets/Wisata/elephantCamp2.jpg';
 
 
 // Initialize AOS
 AOS.init({ once: true });
 
 // Function to generate a set of boxes
-function BoxSet({ headerText, imageSrc, imageSrc2, imageSrc3, text1, text2, text3, children }) {
+function BoxSet({ headerText, videoSrc, imageSrc, imageSrc2, imageSrc3, text1, text2, text3, children }) {
   useEffect(() => {
     AOS.refresh();
   }, []);
@@ -42,7 +46,17 @@ function BoxSet({ headerText, imageSrc, imageSrc2, imageSrc3, text1, text2, text
       <div className="container mx-auto mt-4 relative pb-4" data-aos="fade-up">
         <div className="w-full p-4 bg-gray-200 border border-gray-400" style={{ paddingBottom: '56.25%', position: 'relative', overflow: 'hidden' }}>
           {/* Content of the first box */}
-          <img src={imageSrc} alt="" className="absolute top-0 left-0 w-full h-full object-cover" />
+          {videoSrc && (
+            <iframe
+              width="100%"
+              height="100%"
+              src={videoSrc}
+              title="Embedded Video"
+              allowFullScreen
+              className="absolute top-0 left-0 w-full h-full"
+            ></iframe>
+          )}
+          {!videoSrc && <img src={imageSrc} alt="" className="absolute top-0 left-0 w-full h-full object-cover" />}
           {/* Weather data container */}
           <div className="absolute bottom-0 left-0 p-4">
             <p className="text-white text-lg font-bold">{text3}</p>
@@ -81,6 +95,8 @@ function BoxSet({ headerText, imageSrc, imageSrc2, imageSrc3, text1, text2, text
 }  
 // Main component
 export default function Wisata() {
+  const danauTobaVideoSrc = "https://www.youtube.com/embed/yTBjL2cTiuI?si=WZUJiXNcLK6uo0Ps";
+
   return (
     <div>
       {/* Full-width image container */}
@@ -92,22 +108,16 @@ export default function Wisata() {
       <div className="mb-12">
         <BoxSet
           headerText="Danau Toba"
+          videoSrc={danauTobaVideoSrc}
+          imageSrc={danauToba}
           imageSrc2={danauToba}
           imageSrc3={danauToba2}
           text1="Danau Toba, yang dikenal sebagai danau vulkanik terbesar di dunia, adalah tempat wisata di Sumatera Utara yang paling terkenal."
           text2="Wisatawan bisa menikmati berbagai aktivitas di sekitar danau, seperti berlayar, berenang, atau sekadar bersantai menikmati pemandangan indah."
-        >
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/yTBjL2cTiuI?si=WZUJiXNcLK6uo0Ps"
-            title="Embedded Video"
-            allowFullScreen
-            className="absolute top-0 left-0 w-full h-full"
-          ></iframe>      
-        </BoxSet>
+          text3="Weather data" // You might want to replace this with actual weather data
+        />
       </div>
-      {/* Gunung Sibayak*/}
+            {/* Gunung Sibayak*/}
       <div className="mt-20"> {/* Add margin top to create space between BoxSets */}
         <BoxSet 
           headerText="Gunung Sibayak"
