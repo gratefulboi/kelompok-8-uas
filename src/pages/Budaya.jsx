@@ -152,7 +152,7 @@ export default function Budaya() {
         data-aos="fade-up"
       >
         <div className='swiper-button-prev text-krem bg-hijau1'></div>
-            <SwiperSlide className={styleSlider}>
+            <SwiperSlide className='w-1/2'>
               <div className="relative group overflow-hidden rounded-t-2xl">
                 <img src={gambarBajuBatakToba} className='object-cover w-full h-full'/>
                 <p className={styleHoverSlider}>Menggunakan kain tenunan yang khas yaitu Ulos. Umumnya warna benang yang terdapat pada Ulos ada putih, emas, merah, hitam ataupun perak. 
@@ -160,7 +160,7 @@ export default function Budaya() {
               </div>
               <h1 className="flex justify-center bg-krem rounded-b-2xl">Suku Batak Toba</h1>
             </SwiperSlide>
-            <SwiperSlide className={styleSlider}>
+            <SwiperSlide className='w-1/2'>
               <div className="relative group overflow-hidden rounded-t-2xl">
                 <img src={gambarBajuKaro} className='object-cover w-full h-full'/>
                 <p className={styleHoverSlider}>Menggunakan kain tenun khusus yang terbuat dari pintalan kapas disebut dengan Uis Gara. Proses pembuatan Uis Gara menggunakan benang berwarna merah yang 
@@ -169,7 +169,7 @@ export default function Budaya() {
               </div>
               <h1 className="flex justify-center bg-krem rounded-b-2xl">Suku Karo</h1>
             </SwiperSlide>
-            <SwiperSlide className={styleSlider}>
+            <SwiperSlide className='w-1/2'>
               <div className="relative group overflow-hidden rounded-t-2xl">
                 <img src={gambarBajuPakpak} className='object-cover w-full h-full'/>
                 <p className={styleHoverSlider}>Menggunakan kain tenun khas yang bernama Oles. Pakaian adat Suku Pakpak didominasi oleh warna hitam yang dibuat dengan bahan dasar katun dan perpaduan kain Oles, 
@@ -178,7 +178,7 @@ export default function Budaya() {
               </div>
               <h1 className="flex justify-center bg-krem rounded-b-2xl">Suku Pak Pak</h1>
             </SwiperSlide>
-            <SwiperSlide className={styleSlider}>
+            <SwiperSlide className='w-1/2'>
               <div className="relative group overflow-hidden rounded-t-2xl">
                 <img src={gambarBajuMelayu} className='object-cover w-full h-full'/>
                 <p className={styleHoverSlider}>Seperti kebanyakan pakaian adat Melayu, pakaian adat Suku Melayu mengenakan Baju Kurung yang dilengkapi oleh balutan Kain Songket. Untuk perempuan, menggunakan 
@@ -187,7 +187,7 @@ export default function Budaya() {
               </div>
               <h1 className="flex justify-center bg-krem rounded-b-2xl">Suku Melayu</h1>
             </SwiperSlide>
-            <SwiperSlide className={styleSlider}>
+            <SwiperSlide className='w-1/2'>
               <div className="relative group overflow-hidden rounded-t-2xl">
                 <img src={gambarBajuAngkola} className='object-cover w-full h-full'/>
                 <p className={styleHoverSlider}>Menggunakan bahan dasar Kain Ulos dengan dominasi warna hitam juga perpaduan warna merah. Pakaian suku Angkola memiliki kemiripan dengan pakaian Suku Mandailing, 
