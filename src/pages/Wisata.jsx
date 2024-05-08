@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import AOS from 'aos';
-import 'aos/dist/aos.css'
+import 'aos/dist/aos.css';
 import danauToba from '../assets/Images/danauToba.jpeg';
 import danauToba2 from '../assets/Images/danauToba2.jpg';
 import gunungSibayak from '../assets/Images/gunungSibayak.jpg';
@@ -18,7 +18,6 @@ import tamanLumbini2 from '../assets/Images/tamanLumbini2.jpg';
 import pulauBerhala from '../assets/Images/pulauBerhala.jpg';
 import pulauBerhala2 from '../assets/Images/pulauBerhala2.jpg';
 
-
 // Initialize AOS
 AOS.init({ once: true });
 
@@ -28,6 +27,28 @@ function BoxSet({ headerText, imageSrc, imageSrc2, imageSrc3, text1, text2, text
     AOS.refresh();
   }, []);
 
+  const [weatherData, setWeatherData] = useState(null);
+  const API_KEY = 'YOUR_WEATHER_API_KEY';
+  const API_URL = 'https://api.weatherapi.com/v1/current.json';
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`${API_URL}?key=${API_KEY}&q=2.115355,99.545097&aqi=yes`);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        console.log('Weather data:', data); // Log the received weather data
+        setWeatherData(data);
+      } catch (error) {
+        console.error('Error fetching weather data:', error);
+      }
+    };
+  
+    fetchData();
+  }, []);
+  
   return (
     <>
       {/* Header */}
@@ -43,9 +64,18 @@ function BoxSet({ headerText, imageSrc, imageSrc2, imageSrc3, text1, text2, text
         <div className="w-full p-4 bg-gray-200 border border-gray-400" style={{ paddingBottom: '37.5%', position: 'relative', overflow: 'hidden' }}>
           {/* Content of the first box */}
           <img src={imageSrc} alt="" className="absolute top-0 left-0 w-full h-full object-cover" />
-          {/* Text on the photo */}
+          {/* Weather data container */}
           <div className="absolute bottom-0 left-0 p-4">
-            <p className="text-white text-lg font-bold">{text3}</p>
+            {weatherData ? (
+              <div>
+                <p>Location: {weatherData.location.name}</p>
+                <p>Temperature: {weatherData.current.temp_c}°C</p>
+                <p>Condition: {weatherData.current.condition.text}</p>
+                {/* Add more weather data here */}
+              </div>
+            ) : (
+              <p>Loading...</p>
+            )}
           </div>
         </div>
       </div>
@@ -62,14 +92,14 @@ function BoxSet({ headerText, imageSrc, imageSrc2, imageSrc3, text1, text2, text
           <img src={imageSrc2} alt="" className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-105" />
         </div>
       </div>
-      
+
       {/* Fourth box */}
       <div className="container mx-auto mt-4 flex" data-aos="fade-up">
         <div className="w-1/3 p-4 bg-yellow-200 border border-yellow-400 mr-4 relative overflow-hidden">
           {/* Content of the fourth box */}
           <img src={imageSrc3} alt="" className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-105" />
         </div>
-        
+
         {/* Fifth box */}
         <div className="w-2/3 p-4 bg-purple-200 border border-purple-400">
           {/* Content of the fifth box */}
@@ -78,8 +108,7 @@ function BoxSet({ headerText, imageSrc, imageSrc2, imageSrc3, text1, text2, text
       </div>
     </>
   );
-}
-
+}  
 // Main component
 export default function Wisata() {
   return (
@@ -127,7 +156,6 @@ export default function Wisata() {
           text3="Ini mau video"
         />
       </div>
-
       {/*Air Terjun Sipiso Piso*/}
       <div className="mt-20"> {/* Add margin top to create space between BoxSets */}
         <BoxSet 
