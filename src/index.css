@@ -53,7 +53,7 @@ body {
 
 .animate-gradient-preference {
   animation: gradient-animation-preference 5s ease infinite alternate;
-  background-size: 200% 200%;
+  background-size: 200% 200%;}
 
 .HomeVideo {
   width: 100%;
