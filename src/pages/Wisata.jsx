@@ -26,7 +26,7 @@ import aekNauli2 from '../assets/elephantCamp2.jpg';
 AOS.init({ once: true });
 
 // Function to generate a set of boxes
-function BoxSet({ headerText, imageSrc, imageSrc2, imageSrc3, text1, text2, text3 }) {
+function BoxSet({ headerText, imageSrc, imageSrc2, imageSrc3, text1, text2, text3, children }) {
   useEffect(() => {
     AOS.refresh();
   }, []);
@@ -43,10 +43,10 @@ function BoxSet({ headerText, imageSrc, imageSrc2, imageSrc3, text1, text2, text
 
       {/* First box */}
       <div className="container mx-auto mt-4 relative pb-4" data-aos="fade-up">
-        <div className="w-full p-4 bg-gray-200 border border-gray-400" style={{ paddingBottom: '37.5%', position: 'relative', overflow: 'hidden' }}>
+        <div className="w-full p-4 bg-gray-200 border border-gray-400" style={{ paddingBottom: '56.25%', position: 'relative', overflow: 'hidden' }}>
           {/* Content of the first box */}
           <img src={imageSrc} alt="" className="absolute top-0 left-0 w-full h-full object-cover" />
-          {/* Text on the photo */}
+          {/* Weather data container */}
           <div className="absolute bottom-0 left-0 p-4">
             <p className="text-white text-lg font-bold">{text3}</p>
           </div>
@@ -81,8 +81,7 @@ function BoxSet({ headerText, imageSrc, imageSrc2, imageSrc3, text1, text2, text
       </div>
     </>
   );
-}
-
+}  
 // Main component
 export default function Wisata() {
   return (
@@ -94,17 +93,23 @@ export default function Wisata() {
       
       {/* Danau Toba*/}
       <div className="mb-12">
-        <BoxSet 
+        <BoxSet
           headerText="Danau Toba"
-          imageSrc={danauToba}
           imageSrc2={danauToba}
           imageSrc3={danauToba2}
-          text1="Danau Toba, yang dikenal sebagai Tao Toba dalam Bahasa Batak, adalah danau alami berukuran besar yang terletak di kaldera gunung supervulkan. Dengan panjang 100 kilometer, lebar 30 kilometer, dan kedalaman mencapai 508 meter, Danau Toba adalah danau terbesar di Indonesia dan juga danau vulkanik terbesar di dunia. Terletak di tengah bagian utara pulau Sumatra, dengan ketinggian permukaan sekitar 900 meter, Danau Toba menawarkan pemandangan yang mempesona dan tak terlupakan."
-          text2="Danau Toba bukan hanya tentang keindahan alam semata, tetapi juga tentang sejarah dan budaya yang kaya. Danau ini adalah situs letusan supervulkan yang diperkirakan terjadi 69.000 hingga 77.000 tahun yang lalu, mewakili peristiwa perubahan iklim. Letusan ini adalah letusan eksplosif terbesar di Bumi dalam 25 juta tahun terakhir. Menurut teori bencana Toba, letusan ini memiliki konsekuensi global bagi populasi manusia karena membunuh sebagian besar manusia yang hidup pada waktu itu. Danau Toba juga merupakan salah satu dari dua puluh taman geologi di Indonesia, dan diakui pada Juli 2020 sebagai salah satu Geopark Global UNESCO."
-          text3="Ini mau video"
-        />
+          text1="Danau Toba, yang dikenal sebagai danau vulkanik terbesar di dunia, adalah tempat wisata di Sumatera Utara yang paling terkenal."
+          text2="Wisatawan bisa menikmati berbagai aktivitas di sekitar danau, seperti berlayar, berenang, atau sekadar bersantai menikmati pemandangan indah."
+        >
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/yTBjL2cTiuI?si=WZUJiXNcLK6uo0Ps"
+            title="Embedded Video"
+            allowFullScreen
+            className="absolute top-0 left-0 w-full h-full"
+          ></iframe>      
+        </BoxSet>
       </div>
-
       {/* Gunung Sibayak*/}
       <div className="mt-20"> {/* Add margin top to create space between BoxSets */}
         <BoxSet 
