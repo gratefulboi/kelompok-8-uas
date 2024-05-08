@@ -30,7 +30,7 @@ import audioBalobat from '../assets/audio/Balobat.mp3'
 import audioDoli from '../assets/audio/Dolidoli.mp3'
 
 const styleSlider = 'w-1/2'
-const styleHoverSlider = 'absolute bottom-0 transform translate-y-full group-hover:translate-y-0 transition-transform duration-200 flex justify-center w-full bg-hijau1 p-2 text-justify'
+const styleHoverSlider = 'absolute bottom-0 transform translate-y-full group-hover:translate-y-0 transition-transform duration-200 flex justify-center w-full bg-coklat1 text-gading p-2 text-justify'
 const styleMusic = 'p-4 rounded-t-2xl'
 
 export default function Budaya() {
@@ -63,7 +63,7 @@ export default function Budaya() {
   };
 
   const getCardClasses = (audioKey) => {
-    return `m-10 bg-krem cursor-pointer rounded-2xl max-w-sm max-h-xs transition-all duration-500 ease-in-out  ${selectedCard === audioKey ? 'transform scale-110 bg-hijau1' : ''}`;
+    return `m-10 bg-coklat1 cursor-pointer rounded-2xl max-w-sm max-h-xs transition-all duration-500 ease-in-out text-gading ${selectedCard === audioKey ? 'transform scale-110 bg-krem text-black' : ''}`;
   };
 
   const location = useLocation();
@@ -79,8 +79,8 @@ export default function Budaya() {
   return (
     <>
     <div className='m-10 flex flex-col justify-between items-center'>
-        <h1 className='flex justify-center items-center m-10 text-3xl font-rubik'>Adat & Budaya</h1>
-        <p className='text-center text-xl w-3/4' data-aos="fade-up">
+        <h1 className='flex justify-center items-center m-10 text-3xl font-rubik text-gading'>Adat & Budaya</h1>
+        <p className='text-center text-xl w-3/4 text-gading' data-aos="fade-up">
           Setiap keindahan, keanekaragaman, dan keunikan tiap daerah terlukiskan didalam budaya-budaya yang diwariskan turun temurun.
           Sumatera Utara, dengan keragaman budayanya memberikan warna dan ciri khas yang mempesona, seolah-olah setiap motif ulos dan
           alunan musik gondang membawa kita masuk untuk mengenal harta karun budaya Sumatera Utara lebih dalam.
@@ -128,7 +128,7 @@ export default function Budaya() {
           </CardContent>
         </Card>
 
-        <h1 className='flex justify-center items-center m-10 text-3xl font-rubik' data-aos='fade-up'>Pakaian Adat</h1>
+        <h1 className='flex justify-center items-center m-10 text-3xl font-rubik text-gading' data-aos='fade-up'>Pakaian Adat</h1>
         <Swiper
         effect={'coverflow'}
         grabCursor={true}
@@ -199,7 +199,7 @@ export default function Budaya() {
         <div className='swiper-button-next text-krem bg-hijau1'></div>
         </Swiper>
 
-        <h1 className='flex justify-center items-center m-10 text-3xl font-rubik' data-aos='fade-up'>Alat Musik</h1>
+        <h1 className='flex justify-center items-center m-10 text-3xl font-rubik text-gading' data-aos='fade-up'>Alat Musik</h1>
         <div className='flex flex-row flex-wrap justify-center space-y' data-aos='fade-up'>
           <Card className={getCardClasses('gordang')} onClick={() => handleCardClick('gordang')}>
             <CardContent className={styleMusic}>
@@ -207,7 +207,7 @@ export default function Budaya() {
                 <p className="text-justify">Berasal dari Suku Mandailing. Terdiri atas 9 gendang dimana setiap gendang memiliki ukuran dan panjang diameter yang berbeda sehingga karakter suara yang berbeda. Gordang Sambilan dimainkan saat ada upacara adat misal seperti pernikahan atau pemakaman diperlukan bisa sampai 6 orang untuk memainkannya.</p>
             </CardContent>
             <div className='w-full'>
-              <img src={gambarGordangSambilan} onClick={() => handleImageClick('gordang')} className='rounded-b-2xl object-cover w-full h-full cursor-pointer'/>
+              <img src={gambarGordangSambilan} className='rounded-b-2xl object-cover w-full h-full cursor-pointer'/>
             </div>
           </Card>
 
@@ -217,7 +217,7 @@ export default function Budaya() {
                 <p className="text-justify">Berasal dari Suku Batak Toba. Terdiri atas 5 gendang yang masing-masing memiliki nada yang berbeda. Dimainkan dengan cara dipukul dengan tangan atau alat khusus. Taganing memiliki peranan sangat penting dalam penyelenggaraan pertunjukan musik Gondang karena sebagai pilar utama pembentuk struktur musik Gondang.</p>
             </CardContent>
             <div className='w-full'>
-              <img src={gambarTaganing} onClick={() => handleImageClick('taganing')} className='rounded-b-2xl object-cover w-full h-full cursor-pointer'/>
+              <img src={gambarTaganing} className='rounded-b-2xl object-cover w-full h-full cursor-pointer'/>
             </div>
           </Card>
 
@@ -227,7 +227,7 @@ export default function Budaya() {
                 <p className="text-justify">Berasal dari Suku Nias. Memiliki bentuk mirip dong dengan diameter yang lebih kecil sekitar 20cm hingga 30cm, ketebalannya hingga 4cm, dan bagian tengah yang menonjol. Dimainkan dengan cara dipukul menggunakan pemukul bagian tengah atau tepinya. Faritia biasanya dimainkan sebagai bagian dari ansambel musik khas Nias. </p>
             </CardContent>
             <div className='w-full'>
-              <img src={gambarFaritia} onClick={() => handleImageClick('faritia')} className='rounded-b-2xl object-cover w-full h-full cursor-pointer' />
+              <img src={gambarFaritia} className='rounded-b-2xl object-cover w-full h-full cursor-pointer' />
             </div>
           </Card>
 
@@ -237,7 +237,7 @@ export default function Budaya() {
                 <p className="text-justify">Berasal dari Suku Karo. Berbentuk menyerupai seruling rekorder, namun dengan ukuran yang lebih kecil serta nada yang berbeda. Cara memainkan alat musik ini dengan meniup menggunakan mulut untuk menghasilkan suara melalui lubang-lubang di bambu. Balobat dapat dimainkan secara solo maupun dalam kelompok musik tradisional.</p>
             </CardContent>
             <div className='w-full'>
-              <img src={gambarBalobat} onClick={() => handleImageClick('balobat')} className='rounded-b-2xl object-cover w-full h-full cursor-pointer'/>
+              <img src={gambarBalobat} className='rounded-b-2xl object-cover w-full h-full cursor-pointer'/>
             </div>
           </Card>
 
@@ -247,7 +247,7 @@ export default function Budaya() {
                 <p className="text-justify">Berasal dari Suku Nias. Berbentuk menyerupai Kolintang, namun dengan ukuran yang lebih kecil. Cara memainkannya dipukul, ketika dipukul akan menghasilkan pola bunyi yang khas. Umumnya dimainkan sebagai sarana hiburan saat di ladang, dalam suasana dukacita/kesepian, dan upacara adat dalam konteks keagamaan. </p>
             </CardContent>
             <div className='w-full'>
-              <img src={gambarDolidoli} onClick={() => handleImageClick('doli')} className='rounded-b-2xl object-cover w-full h-full cursor-pointer'/>
+              <img src={gambarDolidoli} className='rounded-b-2xl object-cover w-full h-full cursor-pointer'/>
             </div>
           </Card>
         </div>
