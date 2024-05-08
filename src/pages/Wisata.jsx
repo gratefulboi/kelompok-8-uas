@@ -17,10 +17,7 @@ import tamanLumbini from '../assets/tamanLumbini.jpg';
 import tamanLumbini2 from '../assets/tamanLumbini2.jpg';
 import pulauBerhala from '../assets/pulauBerhala.jpg';
 import pulauBerhala2 from '../assets/pulauBerhala2.jpg';
-import bukitHolbung from '../assets/bukitHolbung.jpg';
-import bukitHolbung2 from '../assets/bukitHolbung2.jpg';
-import aekNauli from '../assets/elephantCamp.jpg';
-import aekNauli2 from '../assets/elephantCamp2.jpg';
+
 
 // Initialize AOS
 AOS.init({ once: true });
