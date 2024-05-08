@@ -1,6 +1,10 @@
 import React from 'react';
 
 import '../index.css'
+import Bryan from '../assets/Profile/Bryan.jpeg'
+import Sadu from '../assets/Profile/Sadu.jpeg'
+
+import { FiUser, FiStar } from 'react-icons/fi';
 
 export default function AboutUs() {
     return (
@@ -13,26 +17,26 @@ export default function AboutUs() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
                         <PersonCard 
                             name="Bryan Yung"
-                            role="Leader, gacor sir"
-                            description="ctetur adipiscing elit. Duis dapibus libero sit amet lacus dapibus, a mattis turpis placerat."
-                            imageSrc="https://coinedition.com/wp-content/uploads/2023/08/BTC-81.jpg"
+                            role="Leader Gacor"
+                            description="Seorang mahasiswa UMN asal korea yang sedang mencari uang serta jati diri untuk bertahan hidup di dunia yang bahkan tidak menyediakan satu wanita pun untuknya"
+                            imageSrc={Bryan}
                         />
                         <PersonCard
-                            name="Jane Smith"
-                            role="UI/UX Designer"
-                            description="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                            imageSrc="https://cdn.antaranews.com/cache/1200x800/2022/08/29/McLaren-720S-Daniel-Ricciardo-1_result.jpg"
+                            name="Sadu Adyatma"
+                            role="Teman Bryan Yung"
+                            description="Seorang mahasiswa yang sangat dekat sekali dengan bryan, memiliki sifat bercanda yang lumayan berkebalikan dengan temannya, Bryan. Aura wibu yang sangat kuat membuat Sadu di segani di linkungannya."
+                            imageSrc={Sadu}
                         />
                         <PersonCard
-                            name="David Johnson"
-                            role="Marketing Manager"
-                            description="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                            name="Jerikho Ruben Rahmani"
+                            role="Pecandu Vtuber No 1 di kalangan teman Bryan"
+                            description="Hobi : Rasis"
                             imageSrc="https://via.placeholder.com/150"
                         />
                         <PersonCard
-                            name="Emily Brown"
-                            role="Content Writer"
-                            description="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                            name="Kerby Limitandy"
+                            role="Teman Bryan juga"
+                            description="Pribadi yang sedikit mindblowing apalagi kalau sudah mencakup tentang ras berkulit hitam, beliau tidak segan-segan dan bersemangat untuk mengatai dan memaki kehitaman yang mereka miliki. 'Niggachu!'"
                             imageSrc="https://via.placeholder.com/150"
                         />
                     </div>
@@ -42,7 +46,7 @@ export default function AboutUs() {
                         <h2 className="text-4xl font-Unna text-yellow-50 mb-4">References</h2>
                         <div className="text-yellow-50 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             <ReferenceItem title="Sumber" description="Indahnya negriku" />
-                            <ReferenceItem title="Test!" description="Ku cinta aku terpnanah persona indonesia" />
+                            <ReferenceItem title="Kontak" description="" />
                             <ReferenceItem title="10 Dosa besar Jerome" description="Saham Kalbe bangkrut setelah colab sama jerome." />
                             <ReferenceItem title="Siapa kita?" description="Goyang nasi padang pakai sambal randang" />
                         </div>
@@ -57,8 +61,8 @@ export default function AboutUs() {
 }
 
 const PersonCard = ({ name, role, description, imageSrc }) => (
-    <div className="cursor-default card bg-white rounded-lg shadow-md overflow-hidden border-4 border-transparent animate-marching-ants duration-500 ease-linear">
-        <img className="w-full h-40 object-cover" src={imageSrc} alt={name} />
+    <div className="relative cursor-pointer card rounded-lg shadow-md overflow-hidden border-4 border-transparent animate-marching-ants duration-100 ease-linear">
+        <img className="w-full h-40 overflow-hidden transition-transform duration-300 transform hover:scale-110 object-cover" src={imageSrc} alt={name} />
         <div className="p-4">
             <h2 className="text-lg text-yellow-50 font-Unna">{name}</h2>
             <p className="font-serif text-yellow-50 text-base text-gray-600 mb-2">{role}</p>
@@ -69,7 +73,10 @@ const PersonCard = ({ name, role, description, imageSrc }) => (
 
 const ReferenceItem = ({ title, description }) => (
     <div className="card border border-solid p-4 rounded-lg shadow-md">
-        <h3 className="text-lg font-semibold mb-2">{title}</h3>
+        <h3 className="text-lg font-semibold mb-2 flex items-center text-yellow-50">
+            <FiStar className="mr-1" /> {/* Icon */}
+            {title}
+        </h3>
         <p className="text-yellow-50 font-rubik">{description}</p>
     </div>
 );

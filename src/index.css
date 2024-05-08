@@ -1,3 +1,6 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -48,28 +51,6 @@ body {
   animation: glowing-animation 4s infinite alternate;
 }
 
-@keyframes marching-ants {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 100px 100px;
-  }
-}
-
-.animate-marching-ants {
-  animation: marching-ants 4s linear infinite;
-  border: 2px dashed currentColor;
-  background: 
-    linear-gradient(45deg, black 25%, transparent 25%) -50px 0,
-    linear-gradient(-45deg, black 25%, transparent 25%) -50px 0,
-    linear-gradient(45deg, transparent 75%, black 75%) 50px 0,
-    linear-gradient(-45deg, transparent 75%, black 75%) 50px 0;
-  background-size: 100px 100px;
-  background-color: rgb(37, 35, 35);
-}
-
-
 .animate-gradient-preference {
   animation: gradient-animation-preference 5s ease infinite alternate;
   background-size: 200% 200%;
@@ -92,8 +73,10 @@ body {
 
 .card{
   border-image: linear-gradient(to right, #754600, #F7EF8A 70%, #754600) 1;
-
 }
+
+
+
 
 
 
