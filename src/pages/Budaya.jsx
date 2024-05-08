@@ -9,7 +9,7 @@ import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules'
 import { useLocation } from 'react-router-dom'
 import 'swiper/css/bundle'
 
-import gambarMain from '../assets/budaya.jpg'
+import gambarMain from '../assets/Images/budaya.jpg'
 import gambarMandokhata from '../assets/Images/mandokhata.jpg'  
 import gambarLompatbatu from '../assets/Images/lompatbatu.png'
 import gambarBajuBatakToba from '../assets/Images/bataktoba.jpg'
