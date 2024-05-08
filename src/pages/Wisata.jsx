@@ -105,7 +105,7 @@ export default function Wisata() {
 
 
   return (
-    <div>
+    <div className='mb-10'>
       {/* Full-width image container */}
       <div className="w-full mb-32">
         <img src={danauToba} alt="Full width" className="w-full h-auto" />
