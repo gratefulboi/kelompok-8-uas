@@ -10,7 +10,7 @@ import { useLocation } from 'react-router-dom'
 import 'swiper/css/bundle'
 
 import gambarMain from '../assets/budaya.jpg'
-import gambarMandokhata from '../assets/Images/mandokhata.jpg'
+import gambarMandokhata from '../assets/Images/mandokhata.jpg'  
 import gambarLompatbatu from '../assets/Images/lompatbatu.png'
 import gambarBajuBatakToba from '../assets/Images/bataktoba.jpg'
 import gambarBajuKaro from '../assets/Images/batakkaro.jpeg'
@@ -29,7 +29,6 @@ import audioFaritia from '../assets/audio/Faritia.mp3'
 import audioBalobat from '../assets/audio/Balobat.mp3'
 import audioDoli from '../assets/audio/Dolidoli.mp3'
 
-const styleSlider = 'w-1/2'
 const styleHoverSlider = 'absolute bottom-0 transform translate-y-full group-hover:translate-y-0 transition-transform duration-200 flex justify-center w-full bg-hijau1 p-2 text-justify'
 const styleMusic = 'p-4 rounded-t-2xl'
 
