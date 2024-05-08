@@ -3,7 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'
 import danauToba from '../assets/Wisata/danauToba.jpeg';
 import danauToba2 from '../assets/Wisata/danauToba2.jpg';
-import gunungSibayak from '../assets/Wisata/gunungSibayak.jpg';
+import gunungSibayak from '../assets/Wisata/GunungSibayak.jpg';
 import gunungSibayak2 from '../assets/Wisata/gunungSibayak2.jpg';
 import bukitLawang from '../assets/Wisata/BukitLawang.jpg';
 import bukitLawang2 from '../assets/Wisata/BukitLawang2.jpg';
@@ -15,7 +15,7 @@ import bukitGundaling from '../assets/Wisata/bukitGundaling.jpg';
 import bukitGundaling2 from '../assets/Wisata/bukitGundaling2.jpg';
 import tamanLumbini from '../assets/Wisata/tamanLumbini.jpg';
 import tamanLumbini2 from '../assets/Wisata/tamanLumbini2.jpg';
-import pulauBerhala from '../assets/Wisata/pulauBerhala.jpg';
+import pulauBerhala from '../assets/Wisata/PulauBerhala.jpg';
 import pulauBerhala2 from '../assets/Wisata/pulauBerhala2.jpg';
 
 
