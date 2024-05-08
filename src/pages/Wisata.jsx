@@ -9,8 +9,8 @@ import bukitLawang from '../assets/Wisata/BukitLawang.jpg';
 import bukitLawang2 from '../assets/Wisata/BukitLawang2.jpg';
 import airTerjunSipisoPiso from '../assets/Wisata/AirTerjunSipisoPiso.jpg';
 import airTerjunSipisoPiso2 from '../assets/Wisata/AirTerjunSipisoPiso2.jpg';
-import guaKelelawar from '../assets/Wisata/guaKelelawar.jpg';
-import guaKelelawar2 from '../assets/Wisata/guaKelelawar2.jpg';
+import gunungSinabung from '../assets/Wisata/gunungSinabung.jpg';
+import gunungSinabung2 from '../assets/Wisata/gunungSinabung2.jpg';
 import bukitGundaling from '../assets/Wisata/bukitGundaling.jpg';
 import bukitGundaling2 from '../assets/Wisata/bukitGundaling2.jpg';
 import tamanLumbini from '../assets/Wisata/tamanLumbini.jpg';
@@ -56,7 +56,6 @@ function BoxSet({ headerText, videoSrc, imageSrc, imageSrc2, imageSrc3, text1, t
               className="absolute top-0 left-0 w-full h-full"
             ></iframe>
           )}
-          {!videoSrc && <img src={imageSrc} alt="" className="absolute top-0 left-0 w-full h-full object-cover" />}
           {/* Weather data container */}
           <div className="absolute bottom-0 left-0 p-4">
             <p className="text-white text-lg font-bold">{text3}</p>
@@ -96,6 +95,16 @@ function BoxSet({ headerText, videoSrc, imageSrc, imageSrc2, imageSrc3, text1, t
 // Main component
 export default function Wisata() {
   const danauTobaVideoSrc = "https://www.youtube.com/embed/yTBjL2cTiuI?si=WZUJiXNcLK6uo0Ps";
+  const gunungSibayakVideoSrc = "https://www.youtube.com/embed/15UeixJTBng?si=qZIEOOg7NZbfBYvw";
+  const bukitLawangVideoSrc = "https://www.youtube.com/embed/XcV1TRntRhs?si=uj2nVVkm6ms0q6ks&amp;start=4";
+  const airTerjunSipisoPisoVideoSrc = "https://www.youtube.com/embed/NNwMAIP_5x8?si=ebcjjca2W5LQHV36";
+  const guaKelelawarVideoSrc = "https://www.youtube.com/embed/15UeixJTBng?si=qZIEOOg7NZbfBYvw";
+  const bukitGundalingVideoSrc = "https://www.youtube.com/embed/15UeixJTBng?si=qZIEOOg7NZbfBYvw";
+  const tamanLumbiniVideoSrc = "https://www.youtube.com/embed/H_ZT1Q4WtPE?si=5c14HqZVr5Y-0XOJ"; // don
+  const pulauBerhalakVideoSrc = "https://www.youtube.com/embed/15UeixJTBng?si=qZIEOOg7NZbfBYvw";
+  const bukitHolbungVideoSrc = "https://www.youtube.com/embed/15UeixJTBng?si=qZIEOOg7NZbfBYvw";
+  const aekNauliVideoSrc = "https://www.youtube.com/embed/15UeixJTBng?si=qZIEOOg7NZbfBYvw";
+
 
   return (
     <div>
@@ -109,11 +118,10 @@ export default function Wisata() {
         <BoxSet
           headerText="Danau Toba"
           videoSrc={danauTobaVideoSrc}
-          imageSrc={danauToba}
           imageSrc2={danauToba}
           imageSrc3={danauToba2}
-          text1="Danau Toba, yang dikenal sebagai danau vulkanik terbesar di dunia, adalah tempat wisata di Sumatera Utara yang paling terkenal."
-          text2="Wisatawan bisa menikmati berbagai aktivitas di sekitar danau, seperti berlayar, berenang, atau sekadar bersantai menikmati pemandangan indah."
+          text1="Danau Toba, yang dikenal sebagai Tao Toba dalam Bahasa Batak, adalah danau alami berukuran besar yang terletak di kaldera gunung supervulkan. Dengan panjang 100 kilometer, lebar 30 kilometer, dan kedalaman mencapai 508 meter, Danau Toba adalah danau terbesar di Indonesia dan juga danau vulkanik terbesar di dunia. Terletak di tengah bagian utara pulau Sumatra, dengan ketinggian permukaan sekitar 900 meter, Danau Toba menawarkan pemandangan yang mempesona dan tak terlupakan."
+          text2="Danau Toba bukan hanya tentang keindahan alam semata, tetapi juga tentang sejarah dan budaya yang kaya. Danau ini adalah situs letusan supervulkan yang diperkirakan terjadi 69.000 hingga 77.000 tahun yang lalu, mewakili peristiwa perubahan iklim. Letusan ini adalah letusan eksplosif terbesar di Bumi dalam 25 juta tahun terakhir. Menurut teori bencana Toba, letusan ini memiliki konsekuensi global bagi populasi manusia karena membunuh sebagian besar manusia yang hidup pada waktu itu. Danau Toba juga merupakan salah satu dari dua puluh taman geologi di Indonesia, dan diakui pada Juli 2020 sebagai salah satu Geopark Global UNESCO."
           text3="Weather data" // You might want to replace this with actual weather data
         />
       </div>
@@ -121,7 +129,7 @@ export default function Wisata() {
       <div className="mt-20"> {/* Add margin top to create space between BoxSets */}
         <BoxSet 
           headerText="Gunung Sibayak"
-          imageSrc={danauToba}
+          videoSrc={gunungSibayakVideoSrc}
           imageSrc2={gunungSibayak}
           imageSrc3={gunungSibayak2}
           text1="Gunung Sibayak, yang dikenal sebagai “gunung raja” oleh masyarakat Karo, adalah gunung berapi aktif yang terletak di Kabupaten Karo, Sumatera Utara. Dengan ketinggian mencapai 2.212 meter, Gunung Sibayak menawarkan pemandangan alam yang memukau dan petualangan mendaki yang menantang. Gunung ini terkenal dengan fumarol belerangnya yang menguap, menciptakan lanskap yang penuh dengan lembah, sungai, dan batu-batuan vulkanik. Keindahan alam ini menawarkan banyak peluang untuk fotografi."
@@ -134,7 +142,6 @@ export default function Wisata() {
       <div className="mt-20"> {/* Add margin top to create space between BoxSets */}
         <BoxSet 
           headerText="Bukit Lawang"
-          imageSrc={danauToba}
           imageSrc2={bukitLawang}
           imageSrc3={bukitLawang2}
           text1="Bukit Lawang adalah sebuah desa wisata yang terletak di Kecamatan Bohorok, Kabupaten Langkat, Provinsi Sumatera Utara. Desa ini berada di tepi hutan lebat Gunung Leuser National Park, membuat batas antara hutan dan desa menjadi kabur. Di sini, monyet bisa terlihat berlarian di atas atap rumah dan suara jangkrik bisa terdengar di malam hari. Desa ini menawarkan suasana yang damai dan santai, dengan sinar matahari yang kuat di pagi hari dan hujan lebat di sore dan malam hari."
@@ -147,7 +154,6 @@ export default function Wisata() {
       <div className="mt-20"> {/* Add margin top to create space between BoxSets */}
         <BoxSet 
           headerText="Air Terjun Sipiso Piso"
-          imageSrc={danauToba}
           imageSrc2={airTerjunSipisoPiso}
           imageSrc3={airTerjunSipisoPiso2}
           text1="Air Terjun Sipiso Piso adalah air terjun yang berada di Desa Tongging, Kecamatan Merek, Kabupaten Karo, Provinsi Sumatra Utara. Air terjun ini memiliki ketinggian hingga 120 meter dan airnya mengucur begitu deras membentuk garis vertikal yang terlihat sempurna. Air terjun ini terbentuk oleh aliran Sungai Asahan yang bermula dari Danau Toba. Aliran sungai tersebut kemudian jatuh dari tebing batu kapur yang menjulang tinggi membentuk air terjun yang indah."
@@ -156,13 +162,12 @@ export default function Wisata() {
         />
       </div>
 
-      {/*Gua Kelelawar*/}
+      {/*Gunung Sinabung*/}
       <div className="mt-20"> {/* Add margin top to create space between BoxSets */}
         <BoxSet 
-          headerText="Gua Kelelawar"
-          imageSrc={danauToba}
-          imageSrc2={guaKelelawar}
-          imageSrc3={guaKelelawar2}
+          headerText="Gunung Sinabung"
+          imageSrc2={gunungSinabung}
+          imageSrc3={gunungSinabung2}
           text1="Gua Kelelawar adalah gua yang menjadi rumah bagi ribuan kelelawar. Gua ini terletak di berbagai lokasi di Indonesia, seperti di Pulau Sangiang, Banten, dan di Bukit Lawang, Kabupaten Langkat, Sumatera Utara. Gua ini menawarkan pengalaman wisata alam yang tak terlupakan. Tersembunyi di balik rimbunnya hutan hujan tropis, gua ini merupakan rumah bagi ribuan kelelawar yang menari dengan indah di langit-langit gua."
           text2="Keunikan dari Gua Kelelawar terletak pada penghuninya, yaitu kelelawar. Kelelawar adalah binatang malam, yang berburu pada malam hari di kegelapan dan tidur pada siang hari. Banyak jenis kelelawar tidur di dalam ceruk gua yang gelap dan lembap. Gua merupakan tempat bermalam dan berhibernasi yang sangat cocok bagi kelelawar karena suhu gua agak mantap bila dibandingkan dengan keadaan di luarnya. Yang juga penting bagi kelangsungan hidup kelelawar ialah selalu adanya kelembapan tinggi di dalam gua."
           text3="Ini mau video"
@@ -173,7 +178,6 @@ export default function Wisata() {
       <div className="mt-20"> {/* Add margin top to create space between BoxSets */}
         <BoxSet 
           headerText="Bukit Gundaling"
-          imageSrc={danauToba}
           imageSrc2={bukitGundaling}
           imageSrc3={bukitGundaling2}
           text1="Bukit Gundaling adalah sebuah destinasi wisata yang terletak di Kecamatan Brastagi dan Merdeka, Kabupaten Karo, Sumatera Utara. Bukit ini berada di ketinggian sekitar 1.500 meter di atas permukaan laut, sehingga suasana di sekitar bukit sangat sejuk. Bukit Gundaling menawarkan panorama alam yang memukau, termasuk pemandangan Gunung Sibayak, Gunung Sinabung, Kota Brastagi, dan lahan pertanian. Bukit ini juga banyak ditumbuhi pohon pinus, memberikan suasana yang segar dan menenangkan."
@@ -186,7 +190,6 @@ export default function Wisata() {
       <div className="mt-20"> {/* Add margin top to create space between BoxSets */}
         <BoxSet 
           headerText="Taman Alam Lumbini"
-          imageSrc={danauToba}
           imageSrc2={tamanLumbini}
           imageSrc3={tamanLumbini2}
           text1="Taman Alam Lumbini adalah sebuah taman yang terletak di Desa Dolat Rayat, Kota Brastagi, Sumatera Utara. Taman ini merupakan replika dari Pagoda Shwedagon yang berada di negara Myanmar. Dengan luas kawasan kurang lebih 3 hektar, taman ini dipusatkan sebagai tempat peribadatan dan wisata religi agama Buddha. Bangunan dengan tinggi 46,8 meter, panjang 68 meter, dan lebar 68 meter ini menjadi salah satu replika Pagoda Shwedagon terbesar di luar Negara Myanmar."
@@ -199,7 +202,6 @@ export default function Wisata() {
       <div className="mt-20"> {/* Add margin top to create space between BoxSets */}
         <BoxSet 
           headerText="Pulau Berhala"
-          imageSrc={danauToba}
           imageSrc2={pulauBerhala}
           imageSrc3={pulauBerhala2}
           text1="Pulau Berhala adalah sebuah pulau yang terletak di Selat Malaka dan masih termasuk dalam wilayah administratif provinsi Jambi. Pulau ini memiliki luas sekitar dan merupakan pulau terluar Indonesia di Selat Malaka dan berbatasan dengan negara Malaysia. Pulau ini dijaga oleh Tentara Nasional Indonesia (TNI) karena statusnya sebagai pulau terluar. Pulau Berhala memiliki topografi bergunung dengan hutan lebat dan pantai yang putih bersih."
@@ -213,7 +215,6 @@ export default function Wisata() {
       <div className="mt-20"> {/* Add margin top to create space between BoxSets */}
         <BoxSet 
           headerText="Bukit Holbung"
-          imageSrc={danauToba}
           imageSrc2={bukitHolbung}
           imageSrc3={bukitHolbung2}
           text1="Bukit Holbung, juga dikenal sebagai Bukit Teletubbies oleh masyarakat setempat, adalah sebuah destinasi wisata alam yang terletak di Dolok Raja, Kecamatan Harian, Kabupaten Samosir, Sumatera Utara. Bukit ini menawarkan pemandangan yang spektakuler, udara yang segar, dan pemandangan alam yang memesona bagi para pengunjung. Dari puncak bukit, Anda akan disuguhi panorama alam yang luar biasa, termasuk hamparan perbukitan hijau yang bergelombang dan pemandangan Danau Toba."
@@ -226,7 +227,6 @@ export default function Wisata() {
       <div className="mt-20"> {/* Add margin top to create space between BoxSets */}
         <BoxSet 
           headerText="Aek Nauli"
-          imageSrc={danauToba}
           imageSrc2={aekNauli}
           imageSrc3={aekNauli2}
           text1="Aek Nauli Elephant Conservation Unit adalah sebuah kawasan konservasi gajah yang terletak di Sumatera Utara. Kawasan ini berada pada poros Danau Toba dan menjadi destinasi wisata ekologi melalui program kawasan hutan dengan tujuan khusus. Di sini, pengunjung dapat mengikuti program wisata ilmiah, aktivitas ekowisata, dan melihat lebih dekat kehidupan satwa seperti Kera, Siamang dan Gajah."
