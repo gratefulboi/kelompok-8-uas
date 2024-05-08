@@ -51,6 +51,37 @@ body {
   animation: glowing-animation 4s infinite alternate;
 }
 
+.HomeVideo {
+  width: 100%;
+  height: 550px;
+  object-fit: fill;
+}
+
+.videoContainer {
+  position: relative;
+}
+
+.videoContainer .credits {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: large;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.videoContainer .credits:hover {
+  opacity: 1;
+}
+
 .Container {
   margin: 0rem auto;
   padding: 46px;
@@ -134,11 +165,30 @@ body {
   justify-content: center;
   border: 2px solid;
   padding: 16px;
-  height: 192px;
   margin-left: auto;
   margin-right: auto;
   border-image: linear-gradient(to right, #754600, #F7EF8A, #754600) 1;
   color: #FFFFF0;
+}
+
+.lines {
+  border-image: linear-gradient(to right, #754600, #F7EF8A, #754600) 1;
+}
+
+.cardImg {
+  border-image: linear-gradient(to right, #754600, #F7EF8A, #754600) 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.cardImg img {
+  transition: all 0.3s;
+  filter: brightness(0.8);
+}
+
+.cardImg:hover img {
+  transform: scale(1.1);
+  filter: brightness(1);
 }
 
 @keyframes marching-ants {
