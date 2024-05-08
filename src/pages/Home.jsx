@@ -24,8 +24,8 @@ function home () {
         
 
       <hr className="m-10 border border-b-2 w-2/3 mx-auto text-sm lines"/>
-      <h1 className="flex items-center justify-center m-10 px-5 text-2xl text-center w-1/2 mx-auto">Selamat datang di portal Djedjak Soematra, tempat dimana keberagaman kuliner, keindahan alam, dan kekayaan budaya bersatu, memberikan Anda pengalaman yang tak hanya memanjakan lidah dan mata, tetapi juga menyentuh jiwa. Mari kita mulai petualangan yang akan menginspirasi setiap langkah Anda di tanah yang luar biasa ini.</h1>
-      <h1 className="text-center mx-auto text-3xl font-serif">Explore</h1>
+      <h1 className="flex items-center justify-center m-10 px-5 text-2xl text-center w-1/2 mx-auto text-yellow-50">Selamat datang di portal Djedjak Soematra, tempat dimana keberagaman kuliner, keindahan alam, dan kekayaan budaya bersatu, memberikan Anda pengalaman yang tak hanya memanjakan lidah dan mata, tetapi juga menyentuh jiwa. Mari kita mulai petualangan yang akan menginspirasi setiap langkah Anda di tanah yang luar biasa ini.</h1>
+      <h1 className="text-center mx-auto text-3xl font-serif text-yellow-50">Explore</h1>
       <hr className="m-5 border border-b-2 w-1/2 mx-auto text-sm lines"/>
 
       <Link to="/Budaya">

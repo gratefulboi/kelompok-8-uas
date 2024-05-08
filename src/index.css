@@ -179,6 +179,7 @@ body {
   border-image: linear-gradient(to right, #754600, #F7EF8A, #754600) 1;
   overflow: hidden;
   position: relative;
+  color: #FFFFF0;
 }
 
 .cardImg img {
