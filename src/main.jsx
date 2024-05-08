@@ -1,11 +1,21 @@
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import {AboutUs, Budaya, Home, Kuliner, Wisata} from './pages/indexpages.js'
 import Header from './components/Header.jsx'
 import './index.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css'
+
+function ScrollToTop() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  return null;
+}
 
 function App() {
   useEffect(() => {
@@ -18,6 +28,7 @@ function App() {
   return (
     <React.StrictMode>
       <Router>
+        <ScrollToTop />
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
