@@ -13,6 +13,11 @@ import guaKelelawar from '../assets/guaKelelawar.jpg';
 import guaKelelawar2 from '../assets/guaKelelawar2.jpg';
 import bukitGundaling from '../assets/bukitGundaling.jpg';
 import bukitGundaling2 from '../assets/bukitGundaling2.jpg';
+import tamanLumbini from '../assets/tamanLumbini.jpg';
+import tamanLumbini2 from '../assets/tamanLumbini2.jpg';
+import pulauBerhala from '../assets/pulauBerhala.jpg';
+import pulauBerhala2 from '../assets/pulauBerhala2.jpg';
+
 
 // Initialize AOS
 AOS.init({ once: true });
@@ -167,14 +172,39 @@ export default function Wisata() {
         <BoxSet 
           headerText="Taman Alam Lumbini"
           imageSrc={danauToba}
-          imageSrc2={bukitGundaling}
-          imageSrc3={bukitGundaling2}
-          text1="Bukit Gundaling adalah sebuah destinasi wisata yang terletak di Kecamatan Brastagi dan Merdeka, Kabupaten Karo, Sumatera Utara. Bukit ini berada di ketinggian sekitar 1.500 meter di atas permukaan laut, sehingga suasana di sekitar bukit sangat sejuk. Bukit Gundaling menawarkan panorama alam yang memukau, termasuk pemandangan Gunung Sibayak, Gunung Sinabung, Kota Brastagi, dan lahan pertanian. Bukit ini juga banyak ditumbuhi pohon pinus, memberikan suasana yang segar dan menenangkan."
-          text2="Bukit Gundaling memiliki berbagai daya tarik yang membuatnya menjadi favorit wisatawan. Di kawasan ini, Anda dapat menemukan bunga-bunga indah dan patung manusia yang menggunakan pakaian khas suku Batak Karo. Jika Anda merasa lelah setelah menyusuri bukit, tersedia bangku dan batu besar yang dapat digunakan untuk duduk atau Anda bisa menyewa tikar. Banyak wisatawan yang datang ke Bukit Gundaling sambil membawa bekal kemudian makan bersama di puncak bukit."
+          imageSrc2={tamanLumbini}
+          imageSrc3={tamanLumbini2}
+          text1="Taman Alam Lumbini adalah sebuah taman yang terletak di Desa Dolat Rayat, Kota Brastagi, Sumatera Utara. Taman ini merupakan replika dari Pagoda Shwedagon yang berada di negara Myanmar. Dengan luas kawasan kurang lebih 3 hektar, taman ini dipusatkan sebagai tempat peribadatan dan wisata religi agama Buddha. Bangunan dengan tinggi 46,8 meter, panjang 68 meter, dan lebar 68 meter ini menjadi salah satu replika Pagoda Shwedagon terbesar di luar Negara Myanmar."
+          text2="Nama Lumbini merujuk pada taman tempat kelahiran dari Sang Buddha atau Siddartha Gautama. Taman ini memiliki berbagai daya tarik, di antaranya kemegahan bangunan Pagoda Emas yang merupakan replika dari Pagoda Shwedagon Myanmar. Selain itu, letaknya yang berada di dataran tinggi membuat taman ini memiliki suasana yang sejuk. Hal ini didukung dengan area taman yang asri dan alami. Melihat Kemegahan dan Keindahan Pagoda Pagoda Emas selain sebagai tempat ibadah umat Buddha, kuil ini juga terbuka untuk umum sebagai tempat wisata."
           text3="Ini mau video"
         />
       </div>
 
+      {/*Pulau Berhala*/}
+      <div className="mt-20"> {/* Add margin top to create space between BoxSets */}
+        <BoxSet 
+          headerText="Pulau Berhala"
+          imageSrc={danauToba}
+          imageSrc2={pulauBerhala}
+          imageSrc3={pulauBerhala2}
+          text1="Taman Alam Lumbini adalah sebuah taman yang terletak di Desa Dolat Rayat, Kota Brastagi, Sumatera Utara. Taman ini merupakan replika dari Pagoda Shwedagon yang berada di negara Myanmar. Dengan luas kawasan kurang lebih 3 hektar, taman ini dipusatkan sebagai tempat peribadatan dan wisata religi agama Buddha. Bangunan dengan tinggi 46,8 meter, panjang 68 meter, dan lebar 68 meter ini menjadi salah satu replika Pagoda Shwedagon terbesar di luar Negara Myanmar."
+          text2="Nama Lumbini merujuk pada taman tempat kelahiran dari Sang Buddha atau Siddartha Gautama. Taman ini memiliki berbagai daya tarik, di antaranya kemegahan bangunan Pagoda Emas yang merupakan replika dari Pagoda Shwedagon Myanmar. Selain itu, letaknya yang berada di dataran tinggi membuat taman ini memiliki suasana yang sejuk. Hal ini didukung dengan area taman yang asri dan alami. Melihat Kemegahan dan Keindahan Pagoda Pagoda Emas selain sebagai tempat ibadah umat Buddha, kuil ini juga terbuka untuk umum sebagai tempat wisata."
+          text3="Ini mau video"
+        />
+      </div>
+
+      {/*Pulau Berhala*/}
+      <div className="mt-20"> {/* Add margin top to create space between BoxSets */}
+        <BoxSet 
+          headerText="Pulau Berhala"
+          imageSrc={danauToba}
+          imageSrc2={pulauBerhala}
+          imageSrc3={pulauBerhala2}
+          text1="Pulau Berhala adalah sebuah pulau yang terletak di Selat Malaka dan masih termasuk dalam wilayah administratif provinsi Jambi. Pulau ini memiliki luas sekitar dan merupakan pulau terluar Indonesia di Selat Malaka dan berbatasan dengan negara Malaysia. Pulau ini dijaga oleh Tentara Nasional Indonesia (TNI) karena statusnya sebagai pulau terluar. Pulau Berhala memiliki topografi bergunung dengan hutan lebat dan pantai yang putih bersih."
+          text2="Pulau Berhala menawarkan pantai eksotis dengan pasir putih yang bersih. Pulau ini memiliki pemandangan khas dengan pantai-pantai di sekitar Riau yang berbatu besar dan bersih. Pada awal dan akhir tahun, pantai Pulau Berhala menjadi tempat persinggahan penyu untuk bertelur. Pulau ini juga menyimpan warisan berupa benteng kuno yang dibangun oleh Jepang serta meriam peninggalan masa penjajahan Belanda."
+          text3="Ini mau video"
+        />
+      </div>
 
     </div>
   );
