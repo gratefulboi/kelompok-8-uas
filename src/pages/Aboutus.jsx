@@ -11,7 +11,7 @@ export default function AboutUs() {
         <div className="relative min-h-screen">
             <div className="absolute inset-0 bg-gradient-animation h-full w-full"></div>
             <div className="relative z-10">
-                <div className="h-64 min-h-screen py-12">
+                <div className="h-64 min-h-screen py-12"data-aos ="fade-up">
                     <h1 className="font-Unna text-yellow-50 text-3xl font-bold mb-6 text-center py-4">The Founder</h1>
                     <hr className="card w-1/3 mx-auto border-b-2 border-black opacity-70 mb-8" />
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
@@ -41,7 +41,7 @@ export default function AboutUs() {
                         />
                     </div>
                 </div>
-                <div className="bg-gradient-to-r from-trueGray-900 to-black animate-gradient-preference py-8">
+                <div className="bg-gradient-to-r from-trueGray-900 to-black animate-gradient-preference py-8"data-aos ="fade-up">
                     <div className="max-w-6xl mx-auto">
                         <h2 className="text-4xl font-Unna text-yellow-50 mb-4">References</h2>
                         <div className="text-yellow-50 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
