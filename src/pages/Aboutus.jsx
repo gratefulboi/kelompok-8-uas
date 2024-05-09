@@ -27,19 +27,19 @@ export default function AboutUs() {
                         <PersonCard
                             name="Sadu Adyatma"
                             role="Anak Buah Bryan"
-                            description="Seorang Mahasiswa UMN yang berada di bawah kendali sang ketua, Bryan. Ia ditugaskan untuk mengerjakan dan mendesign bagian wisata, serta mengurus bagian API dalam website ini."
+                            description="Seorang mahasiswa UMN yang berada di bawah kendali sang ketua, Bryan. Ia ditugaskan untuk mengerjakan dan mendesign bagian wisata, serta mengurus bagian API dalam website ini."
                             imageSrc={Sadu}
                         />
                         <PersonCard
                             name="Jerikho Ruben Rahmani"
                             role="Anak Buah Bryan"
-                            description="Seorang Mahasiswa UMN yang berada di bawah kendali sang ketua, Bryan. Ia ditugaskan untuk mengerjakan dan mendesign bagian Home & About us pada website ini."
+                            description="Seorang mahasiswa UMN yang berada di bawah kendali sang ketua, Bryan. Ia ditugaskan untuk mengerjakan dan mendesign bagian Home & About us pada website ini."
                             imageSrc={Jerikho}
                         />
                         <PersonCard
                             name="Kerby Limitandy"
                             role="Anak Buah Bryan"
-                            description="Seorang Mahasiswa UMN yang berada di bawah kendali sang ketua, Bryan. Ia ditugaskan untuk mengerjakan dan mendesign bagian Kuliner & Home."
+                            description="Seorang mahasiswa UMN yang berada di bawah kendali sang ketua, Bryan. Ia ditugaskan untuk mengerjakan dan mendesign bagian Kuliner & Home di website ini."
                             imageSrc={Kerby}
                         />
                     </div>

@@ -41,15 +41,9 @@ export default function Header() {
                                 <Link className='text-lg' to="/wisata">Wisata</Link>
                             </div>
                         </NavigationMenuItem>
-                        <div id="logo" className='flex justify-center items-center z-50 '>
-                            <Avatar>
-                                <AvatarImage src="https://source.unsplash.com/aerial-photo-of-green-trees-near-mountain-under-cloudy-sky-8N30QSbW5ds" />
-                                <AvatarFallback>Kelompok 8 - Sumatera Utara</AvatarFallback>
-                            </Avatar>
-                            <Link to="/">
-                                <h1 className='glowing font-unna text-5xl text-gading font-bold mx-2'>DjedjakSoematra</h1>
-                            </Link>     
-                        </div>
+                        <Link to="/">
+                            <h1 className='glowing font-unna text-5xl text-gading font-bold mx-2'>DjedjakSoematra</h1>
+                        </Link>
                         <NavigationMenuItem>
                             <div className={styleClassLink}>
                                 <Link className='text-lg' to="/kuliner">Kuliner</Link>
