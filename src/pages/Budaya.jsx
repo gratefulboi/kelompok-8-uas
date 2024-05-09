@@ -79,7 +79,8 @@ export default function Budaya() {
   return (
     <>
     <div className='m-10 flex flex-col justify-between items-center'>
-        <h1 className='flex justify-center items-center m-10 text-3xl font-rubik text-gading'>Adat & Budaya</h1>
+        <h1 className='flex justify-center items-center mt-10 text-3xl font-rubik text-gading' data-aos="fade-up">Adat & Budaya</h1>
+        <hr className="m-5 border border-b-2 w-1/4 mx-auto text-sm lines" data-aos="fade-up"/>
         <p className='text-center text-xl w-3/4 text-gading' data-aos="fade-up">
           Setiap keindahan, keanekaragaman, dan keunikan tiap daerah terlukiskan didalam budaya-budaya yang diwariskan turun temurun.
           Sumatera Utara, dengan keragaman budayanya memberikan warna dan ciri khas yang mempesona, seolah-olah setiap motif ulos dan
@@ -128,7 +129,8 @@ export default function Budaya() {
           </CardContent>
         </Card>
 
-        <h1 className='flex justify-center items-center m-10 text-3xl font-rubik text-gading' data-aos='fade-up'>Pakaian Adat</h1>
+        <h1 className='flex justify-center items-center mt-10 text-3xl font-rubik text-gading' data-aos='fade-up'>Pakaian Adat</h1>
+        <hr className="m-5 border border-b-2 w-1/4 mx-auto text-sm lines" data-aos="fade-up"/>
         <Swiper
         effect={'coverflow'}
         grabCursor={true}
@@ -199,7 +201,8 @@ export default function Budaya() {
         <div className='swiper-button-next text-krem bg-hijau1'></div>
         </Swiper>
 
-        <h1 className='flex justify-center items-center m-10 text-3xl font-rubik text-gading' data-aos='fade-up'>Alat Musik</h1>
+        <h1 className='flex justify-center items-center mt-10 text-3xl font-rubik text-gading' data-aos='fade-up'>Alat Musik</h1>
+        <hr className="m-5 border border-b-2 w-1/4 mx-auto text-sm lines" data-aos="fade-up"/>
         <div className='flex flex-row flex-wrap justify-center space-y' data-aos='fade-up'>
           <Card className={getCardClasses('gordang')} onClick={() => handleCardClick('gordang')}>
             <CardContent className={styleMusic}>

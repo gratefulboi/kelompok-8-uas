@@ -19,7 +19,7 @@ export default function Footer() {
             <div className="max-w-6xl mx-auto px-8">
                 <div className="text-yellow-50  p-1 flex flex-col md:flex-row justify-start items-start">
                     <div className="text-justify w-5/12 mr-20">
-                        <ReferenceItem title="Djedjak Soematra" description="Kami dasdsamilih membuat website dengan tema Sumatera Utara, karena menurut kami provinsi ini memiliki banyak keberagaman yang dapat dikunjungi oleh para wisatawan" />
+                        <ReferenceItem title="Djedjak Soematra" description="Sumatera Utara, daerah yang kaya akan budaya, alam, dan sejarah yang terletak di bagian utara Pulau Sumatera Indonesia, dengan Medan sebagai ibu kotanya. Keindahan alam yang memukau, serta warisan budaya dari macam-macam suku membuat Sumatera Utara sangat menarik untuk dijelajahi." />
                     </div>
                     <div className="h-8 my-auto w-2/12 mr-4">
                         <Link to="/Budaya">

@@ -95,7 +95,7 @@ function BoxSet({ headerText, videoSrc, imageSrc, imageSrc2, imageSrc3, text1, t
 
       {/* Second box */}
       <div className="container mx-auto mt-4 flex" data-aos="fade-up">
-        <div className="w-2/3 p-4 bg-krem border border-mas mr-4">
+        <div className="w-2/3 p-4 bg-krem border border-mas mr-4" data-aos="fade-up">
           {/* Content of the second box */}
           <p className="text-lg text-justify">{text1}</p> {/* Increase font size here */}
         </div>
