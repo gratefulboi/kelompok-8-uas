@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Bryan from '../assets/Profile/Bryan.jpeg';
 import Sadu from '../assets/Profile/Sadu.jpeg';
+import Jerikho from '../assets/Profile/Jerikho.jpeg';
+import Kerby from '../assets/Profile/Kerby.jpeg';
 import Instagram from '../assets/Icons/Instagram.svg';
 import X from '../assets/Icons/X.svg';
 import Fb from '../assets/Icons/Fb.svg';
@@ -15,30 +17,30 @@ export default function AboutUs() {
                 <div className="h-64 min-h-screen py-12" data-aos="fade-up">
                     <h1 className="font-Unna text-yellow-50 text-3xl font-bold mb-6 text-center py-4">The Founder</h1>
                     <hr className="card w-1/3 mx-auto border-b-2 border-black opacity-70 mb-8" />
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                    <div className="text-justify grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
                         <PersonCard 
                             name="Bryan Yung"
-                            role="Leader Gacor"
-                            description="Seorang mahasiswa UMN asal korea yang sedang mencari uang serta jati diri untuk bertahan hidup di dunia yang bahkan tidak menyediakan satu wanita pun untuknya"
+                            role="Leader"
+                            description="Seorang mahasiswa UMN yang merupakan ketua website DjedjakSoematra, Membagi tugas serta memberi arahan kepada anak buahnya. Beliau juga memiliki tugasnya sendiri, yaitu mendesign dan membuat bagian budaya, serta mengurus bagian API."
                             imageSrc={Bryan}
                         />
                         <PersonCard
                             name="Sadu Adyatma"
-                            role="Teman Bryan Yung"
-                            description="Seorang mahasiswa yang sangat dekat sekali dengan bryan, memiliki sifat bercanda yang lumayan berkebalikan dengan temannya, Bryan. Aura wibu yang sangat kuat membuat Sadu di segani di linkungannya."
+                            role="Anak Buah Bryan"
+                            description="Seorang Mahasiswa UMN yang berada di bawah kendali sang ketua, Bryan. Ia ditugaskan untuk mengerjakan dan mendesign bagian wisata, serta mengurus bagian API dalam website ini."
                             imageSrc={Sadu}
                         />
                         <PersonCard
                             name="Jerikho Ruben Rahmani"
-                            role="Pecandu Vtuber No 1 di kalangan teman Bryan"
-                            description="Hobi : Rasis"
-                            imageSrc="https://via.placeholder.com/150"
+                            role="Anak Buah Bryan"
+                            description="Seorang Mahasiswa UMN yang berada di bawah kendali sang ketua, Bryan. Ia ditugaskan untuk mengerjakan dan mendesign bagian Home & About us pada website ini."
+                            imageSrc={Jerikho}
                         />
                         <PersonCard
                             name="Kerby Limitandy"
-                            role="Teman Bryan juga"
-                            description="Pribadi yang sedikit mindblowing apalagi kalau sudah mencakup tentang ras berkulit hitam, beliau tidak segan-segan dan bersemangat untuk mengatai dan memaki kehitaman yang mereka miliki. 'Niggachu!'"
-                            imageSrc="https://via.placeholder.com/150"
+                            role="Anak Buah Bryan"
+                            description="Seorang Mahasiswa UMN yang berada di bawah kendali sang ketua, Bryan. Ia ditugaskan untuk mengerjakan dan mendesign bagian Kuliner & Home."
+                            imageSrc={Kerby}
                         />
                     </div>
                 </div>
