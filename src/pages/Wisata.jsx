@@ -76,8 +76,19 @@ function BoxSet({ headerText, videoSrc, imageSrc, imageSrc2, imageSrc3, text1, t
             ></iframe>
           )}
           {/* Weather data container */}
-          <div className="absolute bottom-0 left-0 p-4">
-          <p className="text-white text-lg font-bold">{weatherData ? `Kondisi Cuaca: ${weatherData.condition.text}, Suhu: ${weatherData.temp_c} °C, Kelembaban: ${weatherData.humidity}%, Awan: ${weatherData.cloud}%, Terakhir Diperbarui: ${weatherData.last_updated}` : 'Loading weather data...'}</p>
+          <div className="absolute bottom-20 left-0 p-4 bg-gray-800 bg-opacity-75 backdrop-blur-md text-white">
+            <p className="text-lg font-bold">
+              {weatherData ? (
+                <>
+                  Suhu: {weatherData.temp_c} °C <br />
+                  Kelembaban: {weatherData.humidity}% <br />
+                  Awan: {weatherData.cloud}% <br />
+                  Arah Angin: {weatherData.wind_degree} °
+                </>
+              ) : (
+                'Loading weather data...'
+              )}
+            </p>
           </div>
         </div>
       </div>
@@ -189,7 +200,7 @@ export default function Wisata() {
           imageSrc3={airTerjunSipisoPiso2}
           text1="Air Terjun Sipiso Piso adalah air terjun yang berada di Desa Tongging, Kecamatan Merek, Kabupaten Karo, Provinsi Sumatra Utara. Air terjun ini memiliki ketinggian hingga 120 meter dan airnya mengucur begitu deras membentuk garis vertikal yang terlihat sempurna. Air terjun ini terbentuk oleh aliran Sungai Asahan yang bermula dari Danau Toba. Aliran sungai tersebut kemudian jatuh dari tebing batu kapur yang menjulang tinggi membentuk air terjun yang indah."
           text2="Nama piso pada air terjun ini diambil dari kata “piso” yang berarti pisau. Sebab, jika melihat air terjun ini dari kejauhan, bentuknya seperti pisau kecil dan panjang. Di sekitar air terjun, terdapat pepohonan yang rimbun dan hijau, serta perkebunan kopi yang memberikan pemandangan yang memukau. Melalui air terjun ini, kamu bisa melihat bukit, benatangan Pulau Samosir, hingga pematang sawah dan ladang. Air Terjun Sipiso Piso menawarkan berbagai aktivitas menarik bagi para pengunjung. Anda bisa menikmati air terjun dari dekat, berjalan-jalan di sekitar hutan, atau bahkan mencoba berbagai aktivitas olahraga di sekitar air terjun."
-          location = "Paris"
+          location = "2.916837,98.519285"
         />
       </div>
 
@@ -202,7 +213,7 @@ export default function Wisata() {
           imageSrc3={gunungSinabung2}
           text1="Gua Kelelawar adalah gua yang menjadi rumah bagi ribuan kelelawar. Gua ini terletak di berbagai lokasi di Indonesia, seperti di Pulau Sangiang, Banten, dan di Bukit Lawang, Kabupaten Langkat, Sumatera Utara. Gua ini menawarkan pengalaman wisata alam yang tak terlupakan. Tersembunyi di balik rimbunnya hutan hujan tropis, gua ini merupakan rumah bagi ribuan kelelawar yang menari dengan indah di langit-langit gua."
           text2="Keunikan dari Gua Kelelawar terletak pada penghuninya, yaitu kelelawar. Kelelawar adalah binatang malam, yang berburu pada malam hari di kegelapan dan tidur pada siang hari. Banyak jenis kelelawar tidur di dalam ceruk gua yang gelap dan lembap. Gua merupakan tempat bermalam dan berhibernasi yang sangat cocok bagi kelelawar karena suhu gua agak mantap bila dibandingkan dengan keadaan di luarnya. Yang juga penting bagi kelangsungan hidup kelelawar ialah selalu adanya kelembapan tinggi di dalam gua."
-          location = "//isi"
+          location = "3.170780,98.391630"
         />
       </div>
 
@@ -215,7 +226,7 @@ export default function Wisata() {
           imageSrc3={bukitGundaling2}
           text1="Bukit Gundaling adalah sebuah destinasi wisata yang terletak di Kecamatan Brastagi dan Merdeka, Kabupaten Karo, Sumatera Utara. Bukit ini berada di ketinggian sekitar 1.500 meter di atas permukaan laut, sehingga suasana di sekitar bukit sangat sejuk. Bukit Gundaling menawarkan panorama alam yang memukau, termasuk pemandangan Gunung Sibayak, Gunung Sinabung, Kota Brastagi, dan lahan pertanian. Bukit ini juga banyak ditumbuhi pohon pinus, memberikan suasana yang segar dan menenangkan."
           text2="Bukit Gundaling memiliki berbagai daya tarik yang membuatnya menjadi favorit wisatawan. Di kawasan ini, Anda dapat menemukan bunga-bunga indah dan patung manusia yang menggunakan pakaian khas suku Batak Karo. Jika Anda merasa lelah setelah menyusuri bukit, tersedia bangku dan batu besar yang dapat digunakan untuk duduk atau Anda bisa menyewa tikar. Banyak wisatawan yang datang ke Bukit Gundaling sambil membawa bekal kemudian makan bersama di puncak bukit."
-          location = "//isi"
+          location = "3.193435,98.501538"
         />
       </div>
 
@@ -228,7 +239,7 @@ export default function Wisata() {
           imageSrc3={tamanLumbini2}
           text1="Taman Alam Lumbini adalah sebuah taman yang terletak di Desa Dolat Rayat, Kota Brastagi, Sumatera Utara. Taman ini merupakan replika dari Pagoda Shwedagon yang berada di negara Myanmar. Dengan luas kawasan kurang lebih 3 hektar, taman ini dipusatkan sebagai tempat peribadatan dan wisata religi agama Buddha. Bangunan dengan tinggi 46,8 meter, panjang 68 meter, dan lebar 68 meter ini menjadi salah satu replika Pagoda Shwedagon terbesar di luar Negara Myanmar."
           text2="Nama Lumbini merujuk pada taman tempat kelahiran dari Sang Buddha atau Siddartha Gautama. Taman ini memiliki berbagai daya tarik, di antaranya kemegahan bangunan Pagoda Emas yang merupakan replika dari Pagoda Shwedagon Myanmar. Selain itu, letaknya yang berada di dataran tinggi membuat taman ini memiliki suasana yang sejuk. Hal ini didukung dengan area taman yang asri dan alami. Melihat Kemegahan dan Keindahan Pagoda Pagoda Emas selain sebagai tempat ibadah umat Buddha, kuil ini juga terbuka untuk umum sebagai tempat wisata."
-          location = "//isi"
+          location = "3.196184,98.540759"
         />
       </div>
 
@@ -241,7 +252,7 @@ export default function Wisata() {
           imageSrc3={pulauBerhala2}
           text1="Pulau Berhala adalah sebuah pulau yang terletak di Selat Malaka dan masih termasuk dalam wilayah administratif provinsi Jambi. Pulau ini memiliki luas sekitar dan merupakan pulau terluar Indonesia di Selat Malaka dan berbatasan dengan negara Malaysia. Pulau ini dijaga oleh Tentara Nasional Indonesia (TNI) karena statusnya sebagai pulau terluar. Pulau Berhala memiliki topografi bergunung dengan hutan lebat dan pantai yang putih bersih."
           text2="Pulau Berhala menawarkan pantai eksotis dengan pasir putih yang bersih. Pulau ini memiliki pemandangan khas dengan pantai-pantai di sekitar Riau yang berbatu besar dan bersih. Pada awal dan akhir tahun, pantai Pulau Berhala menjadi tempat persinggahan penyu untuk bertelur. Pulau ini juga menyimpan warisan berupa benteng kuno yang dibangun oleh Jepang serta meriam peninggalan masa penjajahan Belanda."
-          location = "//isi"
+          location = "3.613502,99.309983"
         />
       </div>
 
@@ -254,7 +265,7 @@ export default function Wisata() {
           imageSrc3={bukitHolbung2}
           text1="Bukit Holbung, juga dikenal sebagai Bukit Teletubbies oleh masyarakat setempat, adalah sebuah destinasi wisata alam yang terletak di Dolok Raja, Kecamatan Harian, Kabupaten Samosir, Sumatera Utara. Bukit ini menawarkan pemandangan yang spektakuler, udara yang segar, dan pemandangan alam yang memesona bagi para pengunjung. Dari puncak bukit, Anda akan disuguhi panorama alam yang luar biasa, termasuk hamparan perbukitan hijau yang bergelombang dan pemandangan Danau Toba."
           text2="Salah satu daya tarik utama Bukit Holbung adalah pemandangannya yang menakjubkan. Terutama saat matahari terbit atau terbenam, pemandangan ini menjadi lebih dramatis dengan warna-warna yang indah. Bagi yang suka petualangan, Bukit Holbung juga menawarkan jalur hiking yang menantang. Selain mendaki ke puncak bukit, mayoritas pengunjung juga mengunjungi Bukit ini untuk berkemah. Menghabiskan malam di kawasan bukit ini dengan berkemah adalah pengalaman yang sangat berkesan."
-          location = "//isi"
+          location = "2.533800,98.701067"
         />
       </div>
 
@@ -267,7 +278,7 @@ export default function Wisata() {
           imageSrc3={airTerjunEfrata2}
           text1="Air Terjun Efrata adalah sebuah wisata air terjun yang berlokasi di Desa Sosor Dolok, Kecamatan Harian, Kabupaten Samosir, Provinsi Sumatera Utara. Air terjun ini memiliki ketinggian sekitar 20 meter dan menawarkan keindahan dengan bentangan air yang jatuh keras dan melebar. Pesona air terjun yang luar biasa indah ini sudah terlihat jelas sejak di area parkir. Lokasinya tidak jauh dari Objek Wisata Menara Pandang Tele, sebuah menara yang sering dijadikan spot untuk menikmati keindahan alam serasa berada di atas awan."
           text2="Air Terjun Efrata memiliki beberapa daya tarik, yaitu sebagai berikut. Pertama, pemandangan Danau Toba yang bisa dinikmati selama perjalanan menuju air terjun ini. Kedua, udara sejuk di sekitar air terjun ini yang lebih sejuk dan cenderung dingin. Ketiga, fasilitas yang ada di sekitar kawasan wisata Air Terjun Efrata diantaranya: Area parkir kendaraan, warung makanan dan minuman, spot foto, toilet, dan gazebo."
-          location = "//isi"
+          location = "2.537669,98.644939"
         />
       </div>
     </div>
