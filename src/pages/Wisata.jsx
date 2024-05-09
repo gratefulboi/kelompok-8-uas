@@ -31,6 +31,7 @@ AOS.init({ once: true });
 function BoxSet({ headerText, videoSrc, imageSrc, imageSrc2, imageSrc3, text1, text2, text3, children }) {
   return (
     <>
+      
       {/* Header */}
       <div className="text-center" data-aos="fade-up">
         <div className="relative inline-block mb-1">
@@ -105,11 +106,24 @@ export default function Wisata() {
 
 
   return (
+<<<<<<< Updated upstream
     <div>
       {/* Full-width image container */}
+=======
+    <div className='mb-10'>
+      {/* Full-width video container */}
+>>>>>>> Stashed changes
       <div className="w-full mb-32">
-        <img src={danauToba} alt="Full width" className="w-full h-auto" />
-      </div>
+        <iframe
+          width="100%"
+          height="1200"
+          src="https://www.youtube.com/embed/EFEeFdZg2F4?si=9gha3bmqGNLIGR0R?autoplay=1"
+          title="Full Width Video"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+          className="w-full h-auto"
+        ></iframe>
+      </div>      
       
       {/* Danau Toba*/}
       <div className="mb-12">
