@@ -1,8 +1,5 @@
 import { Link } from 'react-router-dom';
-import Instagram from '../assets/Icons/Instagram.svg';
-import X from '../assets/Icons/X.svg';
-import Fb from '../assets/Icons/Fb.svg';
-import Yt from '../assets/Icons/Yt.svg';
+
 
 const ReferenceItem = ({ title, description }) => (
     <div className=" p-0">
@@ -15,36 +12,33 @@ const ReferenceItem = ({ title, description }) => (
 
 export default function Footer() {
     return (
-        <div className="bg-gradient-to-r from-trueGray-900 to-black animate-gradient-preference py-4 mx-auto flex justify-center items-center">
+        <div className="bg-gradient-to-r from-trueGray-900 to-black animate-gradient-preference py-2 mx-auto flex justify-center items-center">
             <div className="max-w-6xl mx-auto px-8">
                 <div className="text-yellow-50  p-1 flex flex-col md:flex-row justify-start items-start">
-                    <div className="text-justify w-5/12 mr-20">
-                        <ReferenceItem title="Djedjak Soematra" description="Sumatera Utara, daerah yang kaya akan budaya, alam, dan sejarah yang terletak di bagian utara Pulau Sumatera Indonesia, dengan Medan sebagai ibu kotanya. Keindahan alam yang memukau, serta warisan budaya dari macam-macam suku membuat Sumatera Utara sangat menarik untuk dijelajahi." />
+                    <div className="text-justify w-8/12 mr-20">
+                        <ReferenceItem title="Djedjak Soemoet" description="Sumatera Utara, terletak  pada bagian utara Pulau Sumatera Indonesia, dengan Medan sebagai ibu kotanya. Keindahan alam yang memukau, serta warisan budaya dari macam-macam suku membuat Sumatera Utara sangat menarik untuk dijelajahi." />
                     </div>
-                    <div className="h-8 my-auto w-2/12 mr-4">
+                    <div className="h-16 my-auto w-2/12 ml-8">
                         <Link to="/Budaya">
                             <ReferenceItem title="Budaya"  />
                         </Link>
                     </div>
-                    <div className="h-8 my-auto w-2/12 mr-4">
+                    <div className="h-16 my-auto w-2/12 ml-10">
                         <Link to="/Wisata">
                             <ReferenceItem title="Wisata"  />
                         </Link>
                     </div>
-                    <div className="h-8 my-auto w-2/12">
+                    <div className="h-16 my-auto w-2/12 ml-8">
                         <Link to="/Kuliner">
                             <ReferenceItem title="Kuliner" />
                         </Link>
                     </div>
                 </div>
-                <div className="text-yellow-50 mt-4">
+                <div className="text-yellow-50 mt-3">
                     <p className="text-sm">&copy; 2024 YourWebsite. All rights reserved.</p>
                 </div>
                 <div className="w-fit flex mt-3 items-center max-w-6xl">
-                    <img src={Instagram} alt="Instagram" className="cursor-pointer mr-2 rounded-full p-1 w-10 h-10 icon-shadow icon" />
-                    <img src={X} alt="X" className="cursor-pointer rounded-full mr-2 p-1 w-10 h-10 icon-shadow icon" />
-                    <img src={Fb} alt="Facebook" className="cursor-pointer rounded-full mr-2 p-1 w-10 h-10 icon-shadow icon" />
-                    <img src={Yt} alt="YouTube" className="cursor-pointer rounded-full p-1 w-10 h-10 icon-shadow icon" />
+                    
                 </div>
             </div>
             <div className="mb-8 flex items-center justify-center text-m text-center text-yellow-50 mt-8">
