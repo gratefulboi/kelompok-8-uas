@@ -42,7 +42,7 @@ export default function Header() {
                             </div>
                         </NavigationMenuItem>
                         <Link to="/">
-                            <h1 className='glowing font-unna text-5xl text-gading font-bold mx-2'>DjedjakSoematra</h1>
+                            <h1 className='glowing font-unna text-5xl text-gading font-bold mx-2'>DjedjakSoemoet</h1>
                         </Link>
                         <NavigationMenuItem>
                             <div className={styleClassLink}>

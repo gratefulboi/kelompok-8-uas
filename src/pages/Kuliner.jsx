@@ -14,11 +14,11 @@ import Naniura from "../assets/Kuliner/Naniura.jpg"
 import SambalTuk from "../assets/Kuliner/Sambal_tuktuk.jpg"
 import SotoUdang from "../assets/Kuliner/Soto_udang.jpg"
 
-const name = ["Naniura", "Bihun Bebek", "Bika Ambon", "Dali Ni Horbo", "Lampet", "Lemang", "Mie Gomak", "Arsik", "Sambal Tuk-tuk", "Soto Udang"]
+const name = ["Naniura (Suku Batak)", "Bihun Bebek (Kota Medan)", "Bika Ambon (Suku Melayu)", "Dali Ni Horbo (Suku Batak)", "Lampet (Suku Batak)", "Lemang (Suku Melayu)", "Mie Gomak (Suku Batak)", "Arsik (Suku Batak)", "Sambal Tuk-tuk (Suku Batak)", "Soto Udang (Kota Medan)"]
 
 const images = [Naniura, BihunBebek, BikaAmbon, DaliNi, Lampet, Lemang, MieGomak, Arsik, SambalTuk, SotoUdang]
 
-const desc = ["Naniura dalam Bahasa Batak berarti ikan yang tidak dimasak. Meskipun tidak dimasak, hidangan ikan ini tidak menimbulkan aroma amis dikarenakan ikan ini direndam dalam asam jeruk, membuat aroma-aroma amis dari ikan hilang, serta membuat tulang ikan ini menjadi lembut.", "Salah satu olahan mie yang sangat popular di kota Medan, Sumatera Utara. Komposisi dari hidangan adalah bihun dan bebek. Rasa Gurih yang disajikan oleh hidangan ini berasal dari rempah-rempah khas Sumatera Utara.", "Kue basah yang berasal dari Ambon di kota Medan. Bahan utama pembuatan kue ini adalah gula, tepung sagu, kunyit dan telur. Ciri khas utama kue ini yaitu bentuknya berongga dan warna kuning khas dari kunyit.", "Dali Ni Horbo merupakan keju khas suku Batak. Proses pembuatan keju ini juga dilakukan dengan cara tradisional dan hidangan ini menjadi menu utama di setiap rumah makan khas Batak.", "Lampet merupakah kue tradisional khas batak, yang memiliki ciri khas dengan bentuk limas segi empat dengan warna putih pudar yang berasal dari kelapa parut dan isian gula merah di dalamnya.", "Makanan khas Sumatera Utara yang berasal dari akulturasi budaya Melayu, terbuat dari ketan dan santan sebagai bahan utama hidangan ini dan dibungkus menggunakan daun pisang agar aroma harum daun pisang menyatu dengan hidangan tersebut.", "Mie Gomak merupakan makanan mie khas suku Batak Toba. Bahan utama dalam pembuatan Mie Gomak adalah mie lidi, yang disajikan dengan kuah kari dengan bumbu rempah yang khas.", "Arsik adalah makanan olahan ikan mas khas Sumatera Utara, dimasak bersama dengan kuah santan yang sudah dicampur berbagai rempah-rempah khas Batak membuat hidangan ini memiliki rasa pedas dan segar.", "Sambal khas Batak Toba yang menggunakan ikan kering seperti ikan aso-aso atau ikan teri sebagai bahan utama dalam pembuatannya, dicampur dengan rempah khas seperti andaliman. Sambal ini biasanya digunakan sebagai pelengkap ayam bakar dan hidangan lainnya.", "Makanan khas Sumatera Utara yang terbuat dari rempah-rempah khas Sumatera Utara, udang, dan santan, membuat hidangan ini menjadi sangat populer di kalangan wisatawan"]
+const desc = ["Naniura dalam Bahasa Batak berarti ikan yang tidak dimasak. Meskipun tidak dimasak, hidangan ikan ini tidak menimbulkan aroma amis dikarenakan ikan ini direndam dalam asam jeruk, membuat aroma-aroma amis dari ikan hilang, serta membuat tulang ikan ini menjadi lembut.", "Salah satu olahan mie yang sangat popular di kota Medan, Sumatra Utara. Komposisi dari hidangan adalah bihun dan bebek. Rasa Gurih yang disajikan oleh hidangan ini berasal dari rempah-rempah khas Sumatra Utara.", "Kue basah yang berasal dari Ambon di kota Medan. Bahan utama pembuatan kue ini adalah gula, tepung sagu, kunyit dan telur. Ciri khas utama kue ini yaitu bentuknya berongga dan warna kuning khas dari kunyit.", "Dali Ni Horbo merupakan keju khas suku Batak. Proses pembuatan keju ini juga dilakukan dengan cara tradisional dan hidangan ini menjadi menu utama di setiap rumah makan khas Batak.", "Lampet merupakah kue tradisional khas batak, yang memiliki ciri khas dengan bentuk limas segi empat dengan warna putih pudar yang berasal dari kelapa parut dan isian gula merah di dalamnya.", "Makanan khas Sumatra Utara yang berasal dari akulturasi budaya Melayu, terbuat dari ketan dan santan sebagai bahan utama hidangan ini dan dibungkus menggunakan daun pisang agar aroma harum daun pisang menyatu dengan hidangan tersebut.", "Mie Gomak merupakan makanan mie khas suku Batak Toba. Bahan utama dalam pembuatan Mie Gomak adalah mie lidi, yang disajikan dengan kuah kari dengan bumbu rempah yang khas.", "Arsik adalah makanan olahan ikan mas khas Sumatra Utara, dimasak bersama dengan kuah santan yang sudah dicampur berbagai rempah-rempah khas Batak membuat hidangan ini memiliki rasa pedas dan segar.", "Sambal khas Batak Toba yang menggunakan ikan kering seperti ikan aso-aso atau ikan teri sebagai bahan utama dalam pembuatannya, dicampur dengan rempah khas seperti andaliman. Sambal ini biasanya digunakan sebagai pelengkap ayam bakar dan hidangan lainnya.", "Makanan khas Sumatra Utara yang terbuat dari rempah-rempah khas Sumatra Utara, udang, dan santan, membuat hidangan ini menjadi sangat populer di kalangan wisatawan"]
 
 function Kuliner() {
 
@@ -53,15 +53,15 @@ function Kuliner() {
   }
 
   return (
-    <div className="Container">
+    <div className="Container" >
       <div data-aos="fade-up">
         <Slider {...options}>
             {images.map((img, idx) => (
                 <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
                     <img src={img} alt={img} />
                     <br />
-                    {idx === imageIndex && <h1 className="text-center text-3xl mb-2 heading">{name[idx]}</h1>}
-                    {idx === imageIndex && <p className="description h-52">{desc[idx]}</p>}
+                    {idx === imageIndex && <h1 className="text-center mb-2 heading text-2xl">{name[idx]}</h1>}
+                    {idx === imageIndex && <p className="description h-52 text-xs lg:text-base">{desc[idx]}</p>}
                 </div>
             ))}       
         </Slider>

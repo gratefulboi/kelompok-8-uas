@@ -15,7 +15,7 @@ function home () {
 
       <div className="videoContainer"  data-aos="zoom-out-up">
         <Link to="https://youtu.be/IrcoYCD9-nM?si=vSXVdyEtetG4z0Gc">
-          <video autoPlay loop className="border border-b-2 border-black flex items-center justify-center HomeVideo" src={HomeVid} />
+          <video autoPlay loop className="border-b-2 border-t-2 flex items-center justify-center HomeVideo" src={HomeVid} />
           
           <div className="credits">
             <p>Credit:</p>
