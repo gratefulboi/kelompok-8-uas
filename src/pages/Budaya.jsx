@@ -87,7 +87,7 @@ export default function Budaya() {
         </p>
         <Card className='m-10 rounded-2xl bg-krem w-4/5 shadow-xl' data-aos="fade-up">
             <div className='overflow-hidden rounded-t-xl'>
-                <img className='rounded-t-xl cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out' src={gambarMain} />
+                <img className='rounded-t-2xl cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out w-full h-full' src={gambarMain} />
             </div>
           <CardContent className='flex justify-center items-center mt-5'>
             <p className='text-justify text-xs lg:text-base'>Sumatera Utara merupakan daerah yang dihuni oleh berbagai macam suku yang memiliki keragaman budaya masing-masing 
