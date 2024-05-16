@@ -8,8 +8,8 @@ import danauToba from '../assets/Wisata/danauToba.jpeg';
 import danauToba2 from '../assets/Wisata/danauToba2.jpg';
 import gunungSibayak from '../assets/Wisata/gunungSibayak.jpg';
 import gunungSibayak2 from '../assets/Wisata/gunungSibayak2.jpg';
-import bukitLawang from '../assets/Wisata/BukitLawang.jpg';
-import bukitLawang2 from '../assets/Wisata/BukitLawang2.jpg';
+import bukitLawang from '../assets/Wisata/bukitLawang.jpg';
+import bukitLawang2 from '../assets/Wisata/bukitLawang2.jpg';
 import airTerjunSipisoPiso from '../assets/Wisata/airTerjunSipisoPiso.jpg';
 import airTerjunSipisoPiso2 from '../assets/Wisata/airTerjunSipisoPiso2.jpg';
 import gunungSinabung from '../assets/Wisata/gunungSinabung.jpg';
@@ -85,19 +85,19 @@ function BoxSet({ headerText, videoSrc, imageSrc, imageSrc2, imageSrc3, text1, t
           </div>
         </div>
       </div>
-      <div className="container mx-auto mt-4 flex">
-        <div className="w-2/3 p-4 bg-krem border border-mas mr-4">
+      <div className="container mx-auto mt-4 flex flex-wrap">
+        <div className="w-full md:w-2/3 p-4 bg-krem border border-mas">
           <p className="text-lg text-justify">{text1}</p>
         </div>
-        <div className="w-1/3 p-4 bg-green-200 border border-mas relative overflow-hidden">
+        <div className="w-full md:w-1/3 p-4 bg-green-200 border border-mas relative overflow-hidden">
           <img src={imageSrc2} alt="" className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-105" />
         </div>
       </div>
-      <div className="container mx-auto mt-4 flex">
-        <div className="w-1/3 p-4 bg-yellow-200 border border-mas mr-4 relative overflow-hidden">
+      <div className="container mx-auto mt-4 flex flex-wrap">
+        <div className="w-full md:w-1/3 p-4 bg-yellow-200 border border-mas mr-4 relative overflow-hidden">
           <img src={imageSrc3} alt="" className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-105" />
         </div>
-        <div className="w-2/3 p-4 bg-krem border border-mas">
+        <div className="w-full md:w-2/3 p-4 bg-krem border border-mas">
           <p className="text-lg text-justify">{text2}</p>
         </div>
       </div>
@@ -299,7 +299,6 @@ export default function Wisata() {
   position: relative;
 }
 @media screen and (max-width: 767px) {
-  /* Adjust layout for smaller screens */
   .destination-item {
     flex-basis: 100%; /* Set width to 100% */
   }
