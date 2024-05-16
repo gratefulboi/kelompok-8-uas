@@ -7,12 +7,12 @@
 
 @font-face {
     font-family: Unna;
-    src: url(./assets/Unna/Unna-Bold.ttf)
+    src: url(./assets/fonts/Unna/Unna-Bold.ttf)
 }
 
 @font-face {
   font-family: Rubik;
-  src: url(./assets/Rubik/Rubik-Regular.ttf);
+  src: url(./assets/fonts/Rubik/Rubik-Regular.ttf);
 }
 
 .font-unna {
@@ -33,7 +33,7 @@ body {
     margin : 0;
     background-color: #281E18;
     text-color: white;
-    font-family: 'Unna', 'Rubik', 'RubikBold';
+    font-family: 'Rubik', 'Unna', 'RubikBold';
 }
 
 @keyframes glowing-animation {
