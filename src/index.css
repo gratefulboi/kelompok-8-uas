@@ -235,6 +235,37 @@ body {
 }
 
 @media(max-width: 768px) {
+  .HomeVideo {
+    width: 100%;
+    height: auto;
+  }
+
+  .explore {
+    flex-direction: column;
+  }
+  
+  .explore p {
+    margin: 20px;
+  }
+
+  .exploreWisata {
+    flex-direction: column-reverse;
+  }
+
+  .exploreWisata p {
+    margin: 20px;
+  }
+
+  .videoContainer .credits {
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: medium;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: all 0.5s;
+  }
+
   .slide img {
     width: 100%;
   }
