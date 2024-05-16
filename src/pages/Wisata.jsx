@@ -51,12 +51,16 @@ function BoxSet({ headerText, videoSrc, imageSrc, imageSrc2, imageSrc3, text1, t
 
   return (
     <div className="box-set">
+      {/* Header */}
       <div className="text-center">
         <div className="relative inline-block mb-1">
           <h1 className="text-5xl font-bold inline-block text-gading">{headerText}</h1>
         </div>
       </div>
+
       <hr className="m-5 border border-b-2 w-1/2 mx-auto text-sm lines" />
+
+      {/* Video or Image */}
       <div className="container mx-auto mt-4 relative">
         <div className="w-full p-4 bg-gray-200 border border-gading" style={{ paddingBottom: '75%', position: 'relative', overflow: 'hidden' }}>
           {videoSrc && (
@@ -69,7 +73,7 @@ function BoxSet({ headerText, videoSrc, imageSrc, imageSrc2, imageSrc3, text1, t
               className="absolute top-0 left-0 w-full h-full"
             ></iframe>
           )}
-          <div className="absolute bottom-20 left-0 p-4 bg-gray-800 bg-opacity-75 backdrop-blur-md text-white">
+          <div className="absolute bottom-20 left-0 p-4 bg-gray-800 bg-opacity-75 backdrop-blur-md text-white sm:bottom-10 sm:p-2">
             <p className="text-lg font-bold">
               {weatherData ? (
                 <>
@@ -85,26 +89,29 @@ function BoxSet({ headerText, videoSrc, imageSrc, imageSrc2, imageSrc3, text1, t
           </div>
         </div>
       </div>
-      <div className="container mx-auto mt-4 flex flex-wrap">
-        <div className="w-full md:w-2/3 p-4 bg-krem border border-mas">
-          <p className="text-lg text-justify">{text1}</p>
+
+      {/* Text content */}
+      <div className="container mx-auto mt-4 flex flex-col md:flex-row">
+        <div className="w-full md:w-2/3 p-4 bg-krem border border-mas md:mr-4 mb-4 md:mb-0">
+          <p className="text-xs lg:text-lg text-justify">{text1}</p>
         </div>
         <div className="w-full md:w-1/3 p-4 bg-green-200 border border-mas relative overflow-hidden">
-          <img src={imageSrc2} alt="" className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-105" />
+          <img src={imageSrc2} alt="" className="img-mobile absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-105 sm:h-96" />
         </div>
       </div>
-      <div className="container mx-auto mt-4 flex flex-wrap">
-        <div className="w-full md:w-1/3 p-4 bg-yellow-200 border border-mas mr-4 relative overflow-hidden">
-          <img src={imageSrc3} alt="" className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-105" />
+
+      {/* Text content */}
+      <div className="container mx-auto mt-4 flex flex-col md:flex-row">
+        <div className="w-full md:w-1/3 p-4 bg-yellow-200 border border-mas md:mr-4 relative overflow-hidden">
+          <img src={imageSrc3} alt="" className="img-mobile absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-105 sm:h-96" />
         </div>
-        <div className="w-full md:w-2/3 p-4 bg-krem border border-mas">
-          <p className="text-lg text-justify">{text2}</p>
+        <div className="w-full md:w-2/3 p-4 bg-krem border border-mas mt-4 md:mt-0">
+          <p className="text-xs lg:text-lg text-justify">{text2}</p>
         </div>
       </div>
     </div>
   );
 }
-
 export default function Wisata() {
   const [selectedDestination, setSelectedDestination] = useState(null);
 
@@ -216,15 +223,14 @@ export default function Wisata() {
         <video
           autoPlay
           loop
-          className="w-full h-auto border border-b-2 border-black flex items-center justify-center HomeVideo"
+          className="w-full h-20 lg:h-auto border border-b-2 border-black flex items-center justify-center HomeVideo"
           src={topVideo}
         />  
         {/* Centered text */}
-        <div className="absolute inset-0 flex items-center justify-center text-white text-8xl font-bold" data-aos="zoom-in">
+        <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold lg:text-8xl" data-aos="zoom-in">
           Discover North Sumatra
-        </div>  
+        </div>    
       </div> 
-
       {/* Change header text to "Destinations" */}
       <div className="text-center" data-aos="fade-up">
         <div className="relative inline-block mb-1">
@@ -262,133 +268,115 @@ export default function Wisata() {
         
       {/* CSS styles */}
       <style jsx>{`
-.wisata-container {
-  position: relative;
-  padding: 20px;
-  color: #333;
-}
-.video-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
-}
-.video-background video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.destination-container {
-  max-width: 1200px; /* Adjust as needed */
-  margin: 0 auto;
-  padding: 0 20px;
-}
-.destination-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; /* Distribute items evenly */
-  gap: 20px;
-}
-.destination-item {
-  flex: 1 1 calc(50% - 20px); /* Set width to 50% minus gap */
-  cursor: pointer;
-  transition: transform 0.3s;
-  position: relative;
-}
-@media screen and (max-width: 767px) {
-  .destination-item {
-    flex-basis: 100%; /* Set width to 100% */
+  /* General styles */
+  .wisata-container {
+    position: relative;
+    padding: 20px;
+    color: #333;
   }
-}
-.destination-item:hover {
-  transform: scale(1.05);
-}
-.destination-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: filter 0.3s; /* Add transition for smooth effect */
-}
-.destination-item h2 {
-  text-align: center;
-  margin-top: 10px;
-  font-size: 1.5em;
-  color: #fff;
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-.grayscale img {
-  filter: grayscale(100%);
-}
-.modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  max-height: 80%;
-  overflow-y: auto;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  background: #571E03;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 5000;
-  animation: fadeIn 0.3s ease-out;
-}
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.75);
-  z-index: 999;
-  animation: fadeIn 0.7s ease-out;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+
+  /* Video background */
+  .video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
   }
-  to {
-    opacity: 1;
-  }
-}
-
-.video-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
-}
-
-.video-background video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensure the video covers the entire container */
-}
-
-@media screen and (max-width: 767px) {
   .video-background video {
-    display: none; /* Hide the video on small screens */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
-}
 
+  /* Destination container */
+  .destination-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .destination-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .destination-item {
+    flex: 1 1 calc(50% - 20px);
+    cursor: pointer;
+    transition: transform 0.3s;
+    position: relative;
+  }
+  @media screen and (max-width: 767px) {
+    .destination-item {
+      flex-basis: 100%;
+    }
+  }
+  .destination-item:hover {
+    transform: scale(1.05);
+  }
+  .destination-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: filter 0.3s;
+  }
+  .destination-item h2 {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  .grayscale img {
+    filter: grayscale(100%);
+  }
+
+  /* Modal */
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    background: #571e03;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 5000;
+    animation: fadeIn 0.3s ease-out;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 999;
+    animation: fadeIn 0.7s ease-out;
+  }
+
+  /* Media queries */
+  @media screen and (max-width: 767px) {
+    .img-mobile {
+      width: 100%;
+      height: 300px;
+    }
+  }
 `}</style>
 </div>
   );
 }
-
-
