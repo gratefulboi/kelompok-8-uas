@@ -51,14 +51,13 @@ function BoxSet({ headerText, videoSrc, imageSrc, imageSrc2, imageSrc3, text1, t
 
   return (
     <div className="box-set">
-      <div className="text-center" data-aos="fade-up">
+      <div className="text-center">
         <div className="relative inline-block mb-1">
           <h1 className="text-5xl font-bold inline-block text-gading">{headerText}</h1>
         </div>
       </div>
-      <hr className="m-5 border border-b-2 w-1/2 mx-auto text-sm lines" data-aos="fade-up" />
-      <div className="container mx-auto mt-4 relative" data-aos="fade-up">
-        {/* Change the aspect ratio of the image container */}
+      <hr className="m-5 border border-b-2 w-1/2 mx-auto text-sm lines" />
+      <div className="container mx-auto mt-4 relative">
         <div className="w-full p-4 bg-gray-200 border border-gading" style={{ paddingBottom: '75%', position: 'relative', overflow: 'hidden' }}>
           {videoSrc && (
             <iframe
@@ -86,19 +85,19 @@ function BoxSet({ headerText, videoSrc, imageSrc, imageSrc2, imageSrc3, text1, t
           </div>
         </div>
       </div>
-      <div className="container mx-auto mt-4 flex" data-aos="fade-up">
-        <div className="w-2/3 p-4 bg-krem border border-mas mr-4" data-aos="fade-up">
+      <div className="container mx-auto mt-4 flex">
+        <div className="w-2/3 p-4 bg-krem border border-mas mr-4">
           <p className="text-lg text-justify">{text1}</p>
         </div>
-        <div className="w-1/3 p-4 bg-green-200 border border-mas relative overflow-hidden" data-aos="fade-up">
+        <div className="w-1/3 p-4 bg-green-200 border border-mas relative overflow-hidden">
           <img src={imageSrc2} alt="" className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-105" />
         </div>
       </div>
-      <div className="container mx-auto mt-4 flex" data-aos="fade-up">
-        <div className="w-1/3 p-4 bg-yellow-200 border border-mas mr-4 relative overflow-hidden" data-aos="fade-up">
+      <div className="container mx-auto mt-4 flex">
+        <div className="w-1/3 p-4 bg-yellow-200 border border-mas mr-4 relative overflow-hidden">
           <img src={imageSrc3} alt="" className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-105" />
         </div>
-        <div className="w-2/3 p-4 bg-krem border border-mas" data-aos="fade-up">
+        <div className="w-2/3 p-4 bg-krem border border-mas">
           <p className="text-lg text-justify">{text2}</p>
         </div>
       </div>
@@ -243,12 +242,10 @@ export default function Wisata() {
             const [hoveredDestination, setHoveredDestination] = useState(null);
 
             // Modify the destination item class based on whether it's hovered or not
-            const destinationItemClass = classNames('destination-item', {
-              'grayscale': hoveredDestination !== null && hoveredDestination !== index,
-            });
-            
+            const destinationItemClass = 'destination-item';
+
             return (
-              <div key={index} className={destinationItemClass} onClick={() => openModal(destination)}>
+              <div key={index} className={destinationItemClass} onClick={() => openModal(destination)} data-aos="fade-up">
                 <img src={destination.imageSrc2} alt={destination.headerText} />
                 <h2>{destination.headerText}</h2>
               </div>
@@ -256,148 +253,142 @@ export default function Wisata() {
           })}
         </div>
       </div>        
-        {/* Modal for displaying the full BoxSet */}
+      {/* Modal for displaying the full BoxSet */}
         {selectedDestination && (
           <Modal isOpen={true} onRequestClose={closeModal} contentLabel="Destination Details" className="modal" overlayClassName="overlay" data-aos="zoom-in">
-            <button className="close-button" onClick={closeModal}>X</button>
             <BoxSet {...selectedDestination} />
           </Modal>
         )}
         
       {/* CSS styles */}
       <style jsx>{`
-  .wisata-container {
-    position: relative;
-    padding: 20px;
-    color: #333;
-  }
-  .video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    overflow: hidden;
-  }
-  .video-background video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .destination-container {
-    max-width: 1200px; /* Adjust as needed */
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  .destination-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Distribute items evenly */
-    gap: 20px;
-  }
+.wisata-container {
+  position: relative;
+  padding: 20px;
+  color: #333;
+}
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.destination-container {
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.destination-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribute items evenly */
+  gap: 20px;
+}
+.destination-item {
+  flex: 1 1 calc(50% - 20px); /* Set width to 50% minus gap */
+  cursor: pointer;
+  transition: transform 0.3s;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  /* Adjust layout for smaller screens */
   .destination-item {
-    flex: 1 1 calc(50% - 20px); /* Set width to 20% */
-    cursor: pointer;
-    transition: transform 0.3s;
-    position: relative;
+    flex-basis: 100%; /* Set width to 100% */
   }
-  .destination-item:hover {
-    transform: scale(1.05);
+}
+.destination-item:hover {
+  transform: scale(1.05);
+}
+.destination-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: filter 0.3s; /* Add transition for smooth effect */
+}
+.destination-item h2 {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.5em;
+  color: #fff;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.grayscale img {
+  filter: grayscale(100%);
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  background: #571E03;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 5000;
+  animation: fadeIn 0.3s ease-out;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 999;
+  animation: fadeIn 0.7s ease-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  .destination-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: filter 0.3s; /* Add transition for smooth effect */
+  to {
+    opacity: 1;
   }
-  
-  .destination-item h2 {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 1.5em;
-    color: #fff;
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 5px 10px;
-    border-radius: 5px;
-    /* Apply grayscale filter to all text initially */
-    filter: grayscale(100%);
-    transition: filter 0.3s; /* Add transition for smooth effect */
-  }
-  
-  /* Apply grayscale filter to all images initially */
-  .destination-item img {
-    filter: grayscale(0%); /* Start with color */
-  }
-  
-  /* Remove grayscale filter on hover */
-  .destination-item:hover img,
-  .destination-item:hover h2 {
-    filter: grayscale(0%);
-  }
-  
-  /* Apply grayscale filter to other items when one is hovered */
-  .destination-item:hover ~ .destination-item img,
-  .destination-item:hover ~ .destination-item h2,
-  .destination-item:hover ~ .destination-item:hover img,
-  .destination-item:hover ~ .destination-item:hover h2 {
-    filter: grayscale(100%);
-  }
+}
 
-  .modal-image {
-    /* Set a fixed height for the modal image */
-    height: 400px; /* Adjust as needed */
-    width: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 20px;
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the entire container */
+}
+
+@media screen and (max-width: 767px) {
+  .video-background video {
+    display: none; /* Hide the video on small screens */
   }
-  .modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #571E03; /* Change the background color to inherit */
-    padding: 20px;
-    border-radius: 10px;
-    z-index: 1000;
-    width: 90%; /* Adjust the width as needed */
-    max-height: 90vh; /* Add maximum height to ensure the modal stays within the viewport */
-    overflow-y: auto; /* Enable vertical scrolling if content exceeds the modal height */
-  }    
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-  }        
-  .close-button {
-    background: red;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px; /* Adjust the font size as needed */
-    transition: background-color 0.3s, color 0.3s; /* Add transition for smoother effect */
-  }
-  
-  /* Add hover effect for smoother transition */
-  .close-button:hover {
-    background-color: darkred;
-  }
-    `}</style>
-    </div>
+}
+
+`}</style>
+</div>
   );
 }
 
