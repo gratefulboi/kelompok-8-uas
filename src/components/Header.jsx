@@ -5,9 +5,8 @@ import {
     NavigationMenuItem,
     NavigationMenuList,
   } from "@/components/ui/navigation-menu"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
-const styleClassLink = 'font-rubikBold cursor-pointer relative mx-5 py-1 px-3 text-gading transition ease-out border-b-0 hover:border hover:text-coklat1 hover:shadow-[10px_7px_black] hover:bg-gading hover:scale-110 rounded-2xl'
+const styleClassLink = 'font-rubikBold cursor-pointer relative lg:mx-5 lg:py-1  px-1 lg:px-3 text-gading transition ease-out border-b-0 hover:border hover:text-coklat1 hover:shadow-[10px_7px_black] hover:bg-gading hover:scale-110 rounded-2xl'
 
 export default function Header() {
     const [bgColor, setBgColor] = useState(''); 
@@ -33,25 +32,25 @@ export default function Header() {
                     <NavigationMenuList>
                         <NavigationMenuItem>
                             <div className={styleClassLink}>
-                                <Link className='text-lg' to="/budaya">Budaya</Link>
+                                <Link className='text-xs lg:text-xl ' to="/budaya">Budaya</Link>
                             </div>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
                             <div className={styleClassLink}>
-                                <Link className='text-lg' to="/wisata">Wisata</Link>
+                                <Link className='text-xs lg:text-xl ' to="/wisata">Wisata</Link>
                             </div>
                         </NavigationMenuItem>
                         <Link to="/">
-                            <h1 className='glowing font-unna text-5xl text-gading font-bold mx-2'>DjedjakSoematra</h1>
+                            <h1 className='glowing font-unna text-lg lg:text-5xl  text-gading font-bold mx-2'>DjedjakSoemoet</h1>
                         </Link>
                         <NavigationMenuItem>
                             <div className={styleClassLink}>
-                                <Link className='text-lg' to="/kuliner">Kuliner</Link>
+                                <Link className='text-xs lg:text-xl ' to="/kuliner">Kuliner</Link>
                             </div>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
                             <div className={styleClassLink}>
-                                <Link className='text-lg' to="/aboutus">About Us</Link>
+                                <Link className='text-xs lg:text-xl ' to="/aboutus">About Us</Link>
                             </div>
                         </NavigationMenuItem>
                     </NavigationMenuList>
