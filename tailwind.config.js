@@ -7,15 +7,7 @@ module.exports = {
     './app/**/*.{js,jsx}',
     './src/**/*.{js,jsx}',
   ],
-  prefix: "",
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
     extend: {
       colors: {
         border: "hsl(var(--border))",
@@ -57,6 +49,9 @@ module.exports = {
         darkmas: '#754600',
         mas: '#BF9B30',
         krem: '#F7EEDD',
+      },
+      backgroundImage: {
+        'emas-gradient': 'linear-gradient(to top left, #754600, #F7EF8A, #754600)',
       },
       borderRadius: {
         lg: "var(--radius)",
