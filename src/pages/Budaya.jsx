@@ -93,9 +93,9 @@ export default function Budaya() {
         <h1 className='flex justify-center items-center mt-10 text-lg lg:text-3xl font-rubik text-gading' data-aos="fade-up">Adat & Budaya</h1>
         <hr className="m-5 border border-b-2 w-1/4 mx-auto text-sm lines" data-aos="fade-up"/>
         <p className='text-center text-sm lg:text-xl w-3/4 text-gading' data-aos="fade-up">
-          Setiap keindahan, keanekaragaman, dan keunikan tiap daerah terlukiskan didalam budaya-budaya yang diwariskan turun temurun. <span className='bg-clip-text text-transparent bg-emas-gradient animate-pulse p-1'>
+          Setiap keindahan, keanekaragaman, dan keunikan tiap daerah terlukiskan didalam budaya-budaya yang diwariskan turun temurun. <span className='bg-clip-text text-transparent bg-emas-gradient p-1'>
           {provinceName ? `${provinceName}` : '...'} </span> dengan keragaman budayanya memberikan warna dan ciri khas yang mempesona, seolah-olah setiap motif ulos dan alunan musik gondang membawa kita masuk untuk mengenal harta karun 
-          budaya <span className='bg-clip-text text-transparent bg-emas-gradient animate-pulse p-1'>{provinceName ? `${provinceName}` : '...'} </span> lebih dalam.
+          budaya <span className='bg-clip-text text-transparent bg-emas-gradient p-1'>{provinceName ? `${provinceName}` : '...'} </span> lebih dalam.
         </p>
         <Card className='m-10 rounded-2xl bg-krem w-4/5 shadow-xl' data-aos="fade-up">
             <div className='overflow-hidden rounded-t-xl'>
