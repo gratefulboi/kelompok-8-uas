@@ -26,7 +26,7 @@ function home () {
         
 
       <hr className="m-10 border border-b-2 w-2/3 mx-auto text-sm lines"  data-aos="fade-up"/>
-      <h1 className="flex items-center justify-center m-10 px-5 text-base lg:text-2xl text-center w-auto lg:w-1/2 mx-auto text-yellow-50"  data-aos="fade-up">Selamat datang di portal Djedjak Soematra, tempat dimana keberagaman kuliner, keindahan alam, dan kekayaan budaya bersatu, memberikan Anda pengalaman yang tak hanya memanjakan lidah dan mata, tetapi juga menyentuh jiwa. Mari kita mulai petualangan yang akan menginspirasi setiap langkah Anda di tanah yang luar biasa ini.</h1>
+      <h1 className="flex items-center justify-center m-10 px-5 text-base lg:text-2xl text-center w-auto lg:w-1/2 mx-auto text-yellow-50"  data-aos="fade-up">Selamat datang di portal Djedjak Soemoet, tempat dimana keberagaman kuliner, keindahan alam, dan kekayaan budaya bersatu, memberikan Anda pengalaman yang tak hanya memanjakan lidah dan mata, tetapi juga menyentuh jiwa. Mari kita mulai petualangan yang akan menginspirasi setiap langkah Anda di tanah yang luar biasa ini.</h1>
       <h1 className="text-center mx-auto text-xl lg:text-3xl font-serif text-yellow-50"  data-aos="fade-up">Explore</h1>
       <hr className="m-5 border border-b-2 w-1/2 mx-auto text-sm lines" data-aos="fade-up"/>
 
