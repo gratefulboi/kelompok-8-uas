@@ -12,7 +12,7 @@ export default function AboutUs() {
                 <h1 className="font-Unna text-yellow-50 text-3xl font-bold mb-6 text-center py-4">The Founder</h1>
                 <hr className="card w-1/3 mx-auto border-b-2 border-black opacity-70 mb-8" />
                 <div className="flex flex-col items-center justify-center">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-8 lg:mx-auto">
                         <PersonCard 
                             name="Bryan Yung"
                             role="Leader"
@@ -50,9 +50,9 @@ const PersonCard = ({ name, role, description, imageSrc }) => (
             <img className="w-full h-50 lg:h-40 overflow-hidden transition-transform duration-300 transform hover:scale-110 object-cover" src={imageSrc} alt={name} />
         </div>
         <div className="p-4">
-            <h2 className="text-2xl lg:text-xl text-yellow-50 font-Unna">{name}</h2>
-            <p className="font-serif text-yellow-50 text-xl lg:text-base text-gray-600 mb-2">{role}</p>
-            <p className="text-base lg:text-sm  text-yellow-50">{description}</p>
+            <h2 className="text-lg lg:text-xl text-yellow-50 font-Unna">{name}</h2>
+            <p className="font-serif text-yellow-50 text-base lg:text-base text-gray-600 mb-2">{role}</p>
+            <p className="text-xs lg:text-sm  text-yellow-50">{description}</p>
         </div>
     </div>
 );
