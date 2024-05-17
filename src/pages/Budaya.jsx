@@ -75,15 +75,27 @@ export default function Budaya() {
     };
   }, [location]);
 
+  const [provinceName, setProvinceName] = useState('');
+  useEffect(() => {
+    fetch('https://www.emsifa.com/api-wilayah-indonesia/api/provinces.json')
+      .then(response => response.json())
+      .then(provinces => {
+        const sumateraUtara = provinces.find(province => province.id === '12');
+        if (sumateraUtara) {
+          setProvinceName(sumateraUtara.name); 
+        }
+      });
+  }, []);
+
   return (
     <>
     <div className='m-3 lg:m-10 flex flex-col justify-between items-center'>
         <h1 className='flex justify-center items-center mt-10 text-lg lg:text-3xl font-rubik text-gading' data-aos="fade-up">Adat & Budaya</h1>
         <hr className="m-5 border border-b-2 w-1/4 mx-auto text-sm lines" data-aos="fade-up"/>
         <p className='text-center text-sm lg:text-xl w-3/4 text-gading' data-aos="fade-up">
-          Setiap keindahan, keanekaragaman, dan keunikan tiap daerah terlukiskan didalam budaya-budaya yang diwariskan turun temurun.
-          Sumatera Utara, dengan keragaman budayanya memberikan warna dan ciri khas yang mempesona, seolah-olah setiap motif ulos dan
-          alunan musik gondang membawa kita masuk untuk mengenal harta karun budaya Sumatera Utara lebih dalam.
+          Setiap keindahan, keanekaragaman, dan keunikan tiap daerah terlukiskan didalam budaya-budaya yang diwariskan turun temurun. <span className='bg-clip-text text-transparent bg-emas-gradient p-1'>
+          {provinceName ? `${provinceName}` : '...'} </span> dengan keragaman budayanya memberikan warna dan ciri khas yang mempesona, seolah-olah setiap motif ulos dan alunan musik gondang membawa kita masuk untuk mengenal harta karun 
+          budaya <span className='bg-clip-text text-transparent bg-emas-gradient p-1'>{provinceName ? `${provinceName}` : '...'} </span> lebih dalam.
         </p>
         <Card className='m-10 rounded-2xl bg-krem w-4/5 shadow-xl' data-aos="fade-up">
             <div className='overflow-hidden rounded-t-xl'>

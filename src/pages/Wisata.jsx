@@ -247,7 +247,7 @@ export default function Wisata() {
         />
         {/* Centered text */}
         <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold lg:text-8xl" data-aos="zoom-in">
-          Discover North Soematra
+          Discover North Soematera
         </div>
         {/* Pause button with PiPause icon */}
         <button
