@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Modal from 'react-modal';
 import classNames from 'classnames';
+import { PiPause } from 'react-icons/pi';
+import { RxResume } from "react-icons/rx";
 import danauToba from '../assets/Wisata/danauToba.jpeg';
 import danauToba2 from '../assets/Wisata/danauToba2.jpg';
 import gunungSibayak from '../assets/Wisata/gunungSibayak.jpg';
@@ -114,6 +116,8 @@ function BoxSet({ headerText, videoSrc, imageSrc, imageSrc2, imageSrc3, text1, t
 }
 export default function Wisata() {
   const [selectedDestination, setSelectedDestination] = useState(null);
+  const [videoPlaying, setVideoPlaying] = useState(true);
+  const videoRef = useRef(null);
 
   const destinations = [
     {
@@ -216,56 +220,72 @@ export default function Wisata() {
     setSelectedDestination(null);
   };
 
+  const toggleVideo = () => {
+    const video = videoRef.current;
+
+    if (video.paused) {
+      video.play(); // If video is paused, play it
+      setVideoPlaying(true); // Update videoPlaying state
+    } else {
+      video.pause(); // If video is playing, pause it
+      setVideoPlaying(false); // Update videoPlaying state
+      // Ensure video remains visible when paused
+      video.style.visibility = "visible";
+    }
+  };
+
   return (
     <div className='mb-10'>
       {/* Full-width video container with text */}
       <div className="relative mb-20">
         <video
+          ref={videoRef}
           autoPlay
           loop
           className="w-full h-20 lg:h-auto border border-b-2 border-black flex items-center justify-center HomeVideo"
           src={topVideo}
-        />  
+        />
         {/* Centered text */}
         <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold lg:text-8xl" data-aos="zoom-in">
           Discover North Soematra
-        </div>    
-      </div> 
+        </div>
+        {/* Pause button with PiPause icon */}
+        <button
+          className="absolute bottom-2 right-2 bg-gray-300 bg-opacity-50 text-white px-4 py-2 rounded-md"
+          onClick={toggleVideo}
+        >
+          {videoPlaying ? <PiPause /> : <RxResume />}
+        </button>
+      </div>
+  
       {/* Change header text to "Destinations" */}
       <div className="text-center" data-aos="fade-up">
         <div className="relative inline-block mb-1">
-          <h1 className="text-5xl font-bold inline-block text-gading">Destinations</h1>
+          <h1 className="text-2xl font-bold inline-block text-gading lg:text-5xl l">Destinations</h1> {/* Added sm:text-2xl for mobile size */}
         </div>
       </div>
-
       <hr className="m-5 border border-b-2 w-1/2 mx-auto text-sm lines" data-aos="fade-up"/>
-
+  
       {/* List of destinations */}
       <div className="destination-container">
         <div className="destination-list">
           {destinations.map((destination, index) => {
-            // Add a state to track the index of the hovered destination
-            const [hoveredDestination, setHoveredDestination] = useState(null);
-
-            // Modify the destination item class based on whether it's hovered or not
-            const destinationItemClass = 'destination-item';
-
             return (
-              <div key={index} className={destinationItemClass} onClick={() => openModal(destination)} data-aos="fade-up">
+              <div key={index} className="destination-item" onClick={() => openModal(destination)} data-aos="fade-up">
                 <img src={destination.imageSrc2} alt={destination.headerText} />
                 <h2>{destination.headerText}</h2>
               </div>
             );
           })}
         </div>
-      </div>        
+      </div>
       {/* Modal for displaying the full BoxSet */}
-        {selectedDestination && (
-          <Modal isOpen={true} onRequestClose={closeModal} contentLabel="Destination Details" className="modal" overlayClassName="overlay" data-aos="zoom-in">
-            <BoxSet {...selectedDestination} />
-          </Modal>
-        )}
-        
+      {selectedDestination && (
+        <Modal isOpen={true} onRequestClose={closeModal} contentLabel="Destination Details" className="modal" overlayClassName="overlay" data-aos="zoom-in">
+          <BoxSet {...selectedDestination} />
+        </Modal>
+      )}        
+        // CSS styles
       {/* CSS styles */}
       <style jsx>{`
   /* General styles */
@@ -306,8 +326,9 @@ export default function Wisata() {
   .destination-item {
     flex: 1 1 calc(50% - 20px);
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease; /* Ensure the transition property is properly set */
     position: relative;
+    overflow: hidden; /* Add this to hide the overlay */
   }
   @media screen and (max-width: 767px) {
     .destination-item {
@@ -322,7 +343,18 @@ export default function Wisata() {
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
-    transition: filter 0.3s;
+    transition: filter 0.3s ease; /* Ensure the transition property is properly set */
+  }
+  .destination-item:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    z-index: 1; /* Ensure it's above the image */
+    transition: opacity 0.3s ease;
   }
   .destination-item h2 {
     text-align: center;
