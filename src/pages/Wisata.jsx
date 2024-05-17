@@ -73,8 +73,8 @@ function BoxSet({ headerText, videoSrc, imageSrc, imageSrc2, imageSrc3, text1, t
               className="absolute top-0 left-0 w-full h-full"
             ></iframe>
           )}
-          <div className="absolute bottom-20 left-0 p-4 bg-gray-800 bg-opacity-75 backdrop-blur-md text-white sm:bottom-10 sm:p-2">
-            <p className="text-lg font-bold">
+          <div className="absolute bottom-4 sm:bottom-11 left-0 p-2 sm:p-4 bg-gray-800 bg-opacity-75 backdrop-blur-md text-white">
+            <p className="text-xs sm:text-lg font-bold">
               {weatherData ? (
                 <>
                   Suhu: {weatherData.temp_c} °C <br />
@@ -91,19 +91,19 @@ function BoxSet({ headerText, videoSrc, imageSrc, imageSrc2, imageSrc3, text1, t
       </div>
 
       {/* Text content */}
-      <div className="container mx-auto mt-4 flex flex-col md:flex-row">
+      <div className="container mx-auto mt-4 flex flex-col md:flex-row flex-col-reverse">
         <div className="w-full md:w-2/3 p-4 bg-krem border border-mas md:mr-4 mb-4 md:mb-0">
           <p className="text-xs lg:text-lg text-justify">{text1}</p>
         </div>
-        <div className="w-full md:w-1/3 p-4 bg-green-200 border border-mas relative overflow-hidden">
-          <img src={imageSrc2} alt="" className="img-mobile absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-105 sm:h-96" />
+        <div className="w-full md:w-1/3 p-4 bg-green-200 border border-mas relative overflow-hidden mb-4 md:mb-0 h-64 md:h-auto">
+          <img src={imageSrc2} alt="" className="block absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-105" />
         </div>
       </div>
 
       {/* Text content */}
       <div className="container mx-auto mt-4 flex flex-col md:flex-row">
-        <div className="w-full md:w-1/3 p-4 bg-yellow-200 border border-mas md:mr-4 relative overflow-hidden">
-          <img src={imageSrc3} alt="" className="img-mobile absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-105 sm:h-96" />
+        <div className="w-full md:w-1/3 p-4 bg-yellow-200 border border-mas md:mr-4 relative overflow-hidden h-64 md:h-auto">
+          <img src={imageSrc3} alt="" className="block absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-105" />
         </div>
         <div className="w-full md:w-2/3 p-4 bg-krem border border-mas mt-4 md:mt-0">
           <p className="text-xs lg:text-lg text-justify">{text2}</p>
@@ -136,7 +136,7 @@ export default function Wisata() {
     },
     {
       headerText: "Bukit Lawang",
-      videoSrc: "https://www.youtube.com/embed/Pz6zY5aXRRw?si=2mCV2TQ7RuHmrH2d",
+      videoSrc: "https://www.youtube.com/embed/XcV1TRntRhs?si=HjZn8cxGgumd7weS",
       imageSrc2: bukitLawang,
       imageSrc3: bukitLawang2,
       text1: "Bukit Lawang adalah sebuah desa wisata yang terletak di tepi Sungai Bahorok di Kabupaten Langkat, Sumatera Utara. Desa ini terkenal sebagai pintu gerbang menuju Taman Nasional Gunung Leuser, salah satu kawasan konservasi terpenting di Indonesia. Bukit Lawang adalah tempat yang ideal untuk menjelajahi hutan hujan tropis Sumatera dan melihat langsung orangutan Sumatera yang terancam punah. Selain itu, desa ini juga menawarkan berbagai aktivitas ekowisata seperti trekking, tubing di sungai, dan berinteraksi dengan satwa liar lainnya.",
@@ -228,7 +228,7 @@ export default function Wisata() {
         />  
         {/* Centered text */}
         <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold lg:text-8xl" data-aos="zoom-in">
-          Discover North Sumatra
+          Discover North Soematra
         </div>    
       </div> 
       {/* Change header text to "Destinations" */}
