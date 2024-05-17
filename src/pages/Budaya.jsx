@@ -99,12 +99,12 @@ export default function Budaya() {
           </CardContent>
         </Card>
 
-        <Card className='m-10 flex flex-col lg:flex-row w-11/12 rounded-2xl bg-krem shadow-xl' data-aos="fade-down" data-aos-anchor-placement="right-bottom">
+        <Card className='m-10 flex flex-col lg:flex-row w-11/12 rounded-2xl bg-krem shadow-xl' data-aos="fade-down">
           <div className='overflow-hidden lg:w-1/2 rounded-t-2xl rounded-bl-none lg:rounded-bl-2xl lg:rounded-tr-none flex-grow'>
             <img src={gambarMandokhata} className='cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out w-full h-full object-cover' alt="Gambar Mandok Hata" />
           </div>
           <CardContent className='m-3 lg:m-10 flex flex-col justify-end items-start ml-auto lg:w-1/2'>
-            <CardTitle className='text-base lg:text-3xl items-start mr-auto text-left'>Mandok Hata</CardTitle>
+            <CardTitle className='w-full text-center text-base lg:text-3xl items-start lg:mr-auto lg:text-left'>Mandok Hata</CardTitle>
             <p className='items-end ml-auto text-justify text-xs lg:text-base'>Mandok Hata merupakan salah satu tradisi dari suku Batak. Mandok Hata berasal dari kata Mandok yang berarti menyampaikan dan Hata yang berarti kata. Mandok Hata sendiri memiliki pengertian penyampaian sepatah dua patah kata yang dilakukan seseorang di acara tertentu. Umumnya Mandok Hata ini dilakukan saat perayaan malam tahun baru. Mandok Hata yang dilakukan pada perayaan malam tahun baru, dimana semua keluarga berkumpul baik dari kalangan muda sampai tua. Mandok Hata memiliki tujuan sebagai ucapan syukur, permohonan maaf atas apa yang terjadi selama setahun kebelakang, serta mengungkapkan harapan kedepan supaya menjadi lebih baik kedepan.</p>
           </CardContent>
         </Card>
@@ -114,7 +114,7 @@ export default function Budaya() {
             <img src={gambarLompatbatu} className='cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out w-full h-full object-cover' alt="Gambar Fahombo" />
           </div>
           <CardContent className='m-3 lg:m-10 flex flex-col justify-end items-start ml-auto lg:w-1/2 lg:order-1'>
-            <CardTitle className='text-base lg:text-3xl lg:ml-auto text-center lg:text-left'>Fahombo</CardTitle>
+            <CardTitle className='w-full text-base lg:text-3xl lg:ml-auto text-center lg:text-right'>Fahombo</CardTitle>
             <p className='items-end ml-auto text-justify text-xs lg:text-base'>Fahombo atau hombo merupakan tradisi lompat batu yang berasal dari Suku Nias. Tradisi Fahombo ini sudah diwariskan secara turun-temurun dan merupakan suatu kebanggaan tersendiri bagi masyarakat Suku Nias. Fahombo ini diwariskan kepada anak laki-laki, mereka telah dilatih sejak kecil. Fahombo dilakukan oleh para pemuda laki-laki dengan cara melompati tumpukan batu kurang lebih tingginya 2 hingga 2,2 meter tanpa menyentuh permukaan batu sedikitpun untuk menunjukkan bahwa mereka tangguh dan pantas dianggap dewasa secara fisik. Awalnya Fahombo ini merupakan kebiasaan berperang antar desa suku-suku di pulau Nias. Sebagai ritual bagi para pria suku Nias yang akan menjadi seseorang prajurit. Ketika pria berhasil melompati susunan batu tersebut, baru dia boleh ikut berperang. Sekarang Fahombo dipertunjukkan sebagai atraksi dan simbol budaya Suku Nias untuk mengisi acara yang biasanya ditampilkan bersama atraksi perang.</p>
           </CardContent>
         </Card>
