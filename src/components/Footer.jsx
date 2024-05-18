@@ -7,7 +7,7 @@ const ReferenceItem = ({ title, description }) => (
         <h3 className={`text-base lg:text-xl mr-8 font-semibold mb-4 flex items-center text-yellow-50 ${title === 'Budaya' || title === 'Wisata' || title === 'Kuliner' ? 'hover:text-yellow-400' : ''}`}>
             {title}
         </h3>
-        <p className="text-yellow-50 font-rubik ">{description}</p>
+        <p className="text-yellow-50 font-rubik">{description}</p>
     </div>
 );
 
@@ -59,9 +59,11 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="text-yellow-50 mt-0 lg:mt-3 ">
-                    <p className="text-xs lg:text-sm md:hidden">&copy; 2024 DjedjakSoemoet.</p>
-                    <p className="text-xs lg:text-sm md:hidden">All Right Reserved.</p>
+                <div className="text-yellow-50 mt-0 lg:mt-3">
+                    <div className="md:hidden">
+                        <p className="text-xs lg:text-sm block">&copy; 2024 DjedjakSoemoet.</p>
+                        <p className="text-xs lg:text-sm block">All Right Reserved.</p>
+                    </div>
                     <p className="text-xs lg:text-sm hidden md:block">&copy; 2024 DjedjakSoemoet. All Right Reserved.</p>
                 </div>
                 
