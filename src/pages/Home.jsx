@@ -68,7 +68,7 @@ function Home() {
         </div>
       </Link>
 
-      <h1 className="text-center mx-auto mt-10 text-xl lg:text-3xl font-serif text-yellow-50" data-aos="fade-up">Air Quality</h1>
+      <h1 className="text-center mx-auto mt-10 text-xl lg:text-3xl font-serif text-yellow-50" data-aos="fade-up">Kualitas Udara</h1>
       <hr className="m-5 border border-b-2 w-1/2 mx-auto text-sm lines" data-aos="fade-up"/>
 
       <div>
