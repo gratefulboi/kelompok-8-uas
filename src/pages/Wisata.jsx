@@ -270,6 +270,13 @@ export default function Wisata() {
         </button>
       </div>
 
+      <div className="text-center" data-aos="fade-up">
+        <div className="relative inline-block mb-1">
+          <h1 className="text-2xl font-bold inline-block text-gading lg:text-5xl l">Peta</h1> 
+        </div>
+      </div>
+      <hr className="m-5 border border-b-2 w-1/2 mx-auto text-sm lines" data-aos="fade-up"/>
+  
       <div className="flex justify-center items-center mb-10" data-aos="fade-up">
         <div className="w-3/4 lg:w-1/2">
           {geoData ? (
@@ -289,7 +296,7 @@ export default function Wisata() {
       {/* Change header text to "Destinations" */}
       <div className="text-center" data-aos="fade-up">
         <div className="relative inline-block mb-1">
-          <h1 className="text-2xl font-bold inline-block text-gading lg:text-5xl l">Destinations</h1> {/* Added sm:text-2xl for mobile size */}
+          <h1 className="text-2xl font-bold inline-block text-gading lg:text-5xl l">Destinasi</h1> {/* Added sm:text-2xl for mobile size */}
         </div>
       </div>
       <hr className="m-5 border border-b-2 w-1/2 mx-auto text-sm lines" data-aos="fade-up"/>
