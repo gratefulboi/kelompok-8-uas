@@ -78,20 +78,20 @@ function Home() {
             <div  className="border-2 m-10 flex items-center justify-between text-yellow-50 text-xs lg:text-2xl p-5 cardImg bungkusAngin" data-aos="fade-up">
               <div className="p-5 flex flex-col justify-center w-auto h-auto">
                 <div>
-                  <h1 className="flex items-center justify-center text-xs lg:text-2xl">Gases</h1>
+                  <h1 className="flex items-center justify-center text-xs lg:text-2xl">Gas</h1>
                 </div>
                 
                 <div className="border-2 border-white p-5 mt-5 cardImg" data-aos="fade-up">
-                  <p>Carbon Monoxide: {airQuality.components.co} μg/m3</p>
-                  <p>Sulfur Dioxide: {airQuality.components.so2} μg/m3</p>
-                  <p>Ozone: {airQuality.components.o3} μg/m3</p>
-                  <p>Nitrogen Dioxide: {airQuality.components.no2} μg/m3</p>
+                  <p>Karbon Monoksida: {airQuality.components.co} μg/m3</p>
+                  <p>Sulfur Dioksida: {airQuality.components.so2} μg/m3</p>
+                  <p>Ozon: {airQuality.components.o3} μg/m3</p>
+                  <p>Nitrogen Dioksida: {airQuality.components.no2} μg/m3</p>
                 </div>
               </div>
               
               <div className="p-5 flex flex-col justify-center h-auto">
                 <div>
-                  <h1 className="flex items-center justify-center text-xs lg:text-2xl">Overall Air Quality</h1>
+                  <h1 className="flex items-center justify-center text-xs lg:text-2xl">Kualitas Udara Rata-rata</h1>
                 </div>
                 
                 <div className="border-2 border-white p-5 mt-5 flex justify-center items-center cardImg  w-auto" data-aos="fade-up">
@@ -101,12 +101,12 @@ function Home() {
 
               <div className="p-5 flex flex-col justify-center h-auto">
                 <div>
-                  <h1 className="flex items-center justify-center text-xs lg:text-2xl">Particles</h1>
+                  <h1 className="flex items-center justify-center text-xs lg:text-2xl">Partikel</h1>
                 </div>
                 
                 <div className="border-2 border-white px-5 mt-5 particles cardImg w-auto" data-aos="fade-up">
-                  <p>Coarse Particles: {airQuality.components.pm10} μg/m3</p>
-                  <p>Fine Particles: {airQuality.components.pm2_5} μg/m3</p>
+                  <p>Partikel Kasar: {airQuality.components.pm10} μg/m3</p>
+                  <p>Partikel Halus: {airQuality.components.pm2_5} μg/m3</p>
                 </div>
               </div>
 
