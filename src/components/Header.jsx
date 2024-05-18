@@ -27,7 +27,7 @@ export default function Header() {
     }, []);
 
     return (
-        <div className='sticky top-0 left-0 w-full z-50 flex flex-row justify-center items-center p-4 duration-1000' style={{ backgroundColor: bgColor }}>
+        <div className='sticky top-0 left-0 w-full flex flex-row justify-center items-center p-4 duration-1000' style={{ backgroundColor: bgColor, zIndex: 9999 }}>
                 <NavigationMenu>
                     <NavigationMenuList>
                         <NavigationMenuItem>

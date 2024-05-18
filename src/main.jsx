@@ -7,6 +7,7 @@ import Footer from './components/Footer.jsx'
 import './index.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css'
+import 'leaflet/dist/leaflet.css';
 
 function ScrollToTop() {
   const location = useLocation();

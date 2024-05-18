@@ -1,4 +1,6 @@
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const ReferenceItem = ({ title, description }) => (
     <div className="p-0">
@@ -9,9 +11,31 @@ const ReferenceItem = ({ title, description }) => (
     </div>
 );
 
-export default function Footer() {
+const Footer = () => {
+    const [timeData, setTimeData] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchTimeData = async () => {
+            try {
+                const response = await axios.get('https://api.api-ninjas.com/v1/worldtime?lat=3.5896&lon=98.6736', {
+                    headers: {
+                        'X-Api-Key': 'GP38WB5ze7cv/YpYduxCDA==pua8FfQFrx1jTrCR'
+                    }
+                });
+                setTimeData(response.data);
+                setLoading(false);
+            } catch (error) {
+                console.error('Error fetching time data:', error);
+                setLoading(false);
+            }
+        };
+
+        fetchTimeData();
+    }, []);
+
     return (
-        <div className="bg-gradient-to-r from-trueGray-900 to-black animate-gradient-preference py-2 mx-auto flex justify-center items-center">
+        <div className="bg-gradient-to-r from-trueGray-900 to-black animate-gradient-preference py-2 mx-auto flex justify-center items-center relative">
             <div className="max-w-6xl mx-auto px-8">
                 <div className="text-yellow-50 p-1 flex flex-col md:flex-row md:justify-between md:items-center">
                     <div className="text-justify text-baselg:text-lg w-full lg:w-7/12">
@@ -35,8 +59,17 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="text-yellow-50 lg:mt-3"> 
+                <div className="text-yellow-50 lg:mt-3">
                     <p className="text-sm">&copy; 2024 DjedjakSoemoet. All rights reserved.</p>
+                </div>
+                <div className="absolute bottom-2 right-2 text-yellow-50 lg:mt-3">
+                    {loading ? (
+                        <p className="text-sm">Loading current time...</p>
+                    ) : timeData ? (
+                        <p className="text-sm">Date Now: {timeData.year}-{timeData.month}-{timeData.day}, Time Now: {timeData.hour}:{timeData.minute}:{timeData.second}</p>
+                    ) : (
+                        <p className="text-sm">Failed to load time data</p>
+                    )}
                 </div>
             </div>
             <div className="mb-8 flex items-center justify-center text-m text-center text-yellow-50 mt-8">
@@ -44,4 +77,6 @@ export default function Footer() {
             </div>
         </div>
     );
-}
+};
+
+export default Footer;

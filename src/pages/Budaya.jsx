@@ -7,6 +7,7 @@ import {
 import {Swiper, SwiperSlide} from 'swiper/react'
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules'
 import { useLocation } from 'react-router-dom'
+import axios from 'axios'
 import 'swiper/css/bundle'
 
 import gambarMain from '../assets/Budaya/budaya.jpg'
@@ -77,13 +78,16 @@ export default function Budaya() {
 
   const [provinceName, setProvinceName] = useState('');
   useEffect(() => {
-    fetch('https://www.emsifa.com/api-wilayah-indonesia/api/provinces.json')
-      .then(response => response.json())
-      .then(provinces => {
+    axios.get('https://www.emsifa.com/api-wilayah-indonesia/api/provinces.json')
+      .then(response => {
+        const provinces = response.data;
         const sumateraUtara = provinces.find(province => province.id === '12');
         if (sumateraUtara) {
-          setProvinceName(sumateraUtara.name); 
+          setProvinceName(sumateraUtara.name);
         }
+      })
+      .catch(error => {
+        console.error('Error fetching the JSON:', error);
       });
   }, []);
 
