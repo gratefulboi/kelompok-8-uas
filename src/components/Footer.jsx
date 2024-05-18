@@ -38,7 +38,7 @@ const Footer = () => {
         <div className="bg-gradient-to-r from-trueGray-900 to-black animate-gradient-preference py-2 mx-auto flex justify-center items-center relative">
             <div className="max-w-6xl mx-auto px-8">
                 <div className="text-yellow-50 p-1 flex flex-col md:flex-row md:justify-between md:items-center">
-                    <div className="text-justify text-sm lg:text-lg w-full lg:w-7/12">
+                    <div className="text-justify text-xs lg:text-lg w-full lg:w-7/12">
                         <ReferenceItem title="Djedjak Soemoet" description="Sumatera Utara, terletak pada bagian utara Pulau Sumatera Indonesia, dengan Medan sebagai ibu kotanya. Keindahan alam yang memukau, serta warisan budaya dari macam-macam suku membuat Sumatera Utara sangat menarik untuk dijelajahi." />
                     </div>
                     <div className="flex flex-col md:flex-row md:justify-end w-full md:w-5/12 mt-4 md:mt-0">
@@ -59,9 +59,12 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="text-yellow-50 mt-0 lg:mt-3">
-                    <p className="text-xs lg:text-sm">&copy; 2024 DjedjakSoemoet. All rights reserved.</p>
+                <div className="text-yellow-50 mt-0 lg:mt-3 ">
+                    <p className="text-xs lg:text-sm md:hidden">&copy; 2024 DjedjakSoemoet.</p>
+                    <p className="text-xs lg:text-sm md:hidden">All Right Reserved.</p>
+                    <p className="text-xs lg:text-sm hidden md:block">&copy; 2024 DjedjakSoemoet. All Right Reserved.</p>
                 </div>
+                
                 <div className="absolute bottom-2 right-2 text-yellow-50 mt-3 lg:mt-0">
                     {loading ? (
                         <p className="text-sm">Loading current time...</p>
@@ -75,7 +78,6 @@ const Footer = () => {
                     )}
                 </div>
             </div>
-
         </div>
     );
 };

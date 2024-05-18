@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-import DanauToba from "../assets/Wisata/DanauToba.jpg";
+import DanauToba from "../assets/Wisata/danauToba.jpg";
 import LompatBatu from '../assets/Budaya/budaya.jpg';
 import Naniura from "../assets/Kuliner/Naniura.jpg";
 

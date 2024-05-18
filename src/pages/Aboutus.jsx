@@ -16,24 +16,24 @@ export default function AboutUs() {
                         <PersonCard 
                             name="Bryan Yung"
                             role="Leader"
-                            description="Seorang mahasiswa UMN yang merupakan ketua website DjedjakSoematra, Membagi tugas serta memberi arahan kepada anak buahnya. Beliau juga memiliki tugasnya sendiri, yaitu mendesign dan membuat bagian budaya, serta mengurus bagian API."
+                            description="Seorang mahasiswa UMN yang merupakan ketua website DjedjakSoemoet, Membagi tugas serta memberi arahan kepada anak buahnya. Beliau juga memiliki tugasnya sendiri, yaitu mendesign dan membuat bagian budaya, serta mengurus bagian API."
                             imageSrc={Bryan}
                         />
                         <PersonCard
                             name="Sadu Adyatma"
-                            role="Anak Buah Bryan"
+                            role="Anggota"
                             description="Seorang mahasiswa UMN yang berada di bawah kendali sang ketua, Bryan. Ia ditugaskan untuk mengerjakan dan mendesign bagian wisata, serta mengurus bagian API dalam website ini."
                             imageSrc={Sadu}
                         />
                         <PersonCard
                             name="Jerikho Ruben Rahmani"
-                            role="Anak Buah Bryan"
+                            role="Anggota"
                             description="Seorang mahasiswa UMN yang berada di bawah kendali sang ketua, Bryan. Ia ditugaskan untuk mengerjakan dan mendesign bagian Home & About us pada website ini."
                             imageSrc={Jerikho}
                         />
                         <PersonCard
                             name="Kerby Limitandy"
-                            role="Anak Buah Bryan"
+                            role="Anggota"
                             description="Seorang mahasiswa UMN yang berada di bawah kendali sang ketua, Bryan. Ia ditugaskan untuk mengerjakan dan mendesign bagian Kuliner & Home di website ini."
                             imageSrc={Kerby}
                         />
