@@ -3,7 +3,8 @@ import axios from 'axios';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Modal from 'react-modal';
-import classNames from 'classnames';
+import { MapContainer, TileLayer, GeoJSON } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
 import { PiPause } from 'react-icons/pi';
 import { RxResume } from "react-icons/rx";
 import danauToba from '../assets/Wisata/danauToba.jpeg';
@@ -46,7 +47,6 @@ async function fetchWeatherData(location) {
 
 function BoxSet({ headerText, videoSrc, imageSrc, imageSrc2, imageSrc3, text1, text2, location }) {
   const [weatherData, setWeatherData] = useState(null);
-
   useEffect(() => {
     fetchWeatherData(location).then(data => setWeatherData(data));
   }, [location]);
@@ -234,6 +234,18 @@ export default function Wisata() {
     }
   };
 
+  const [geoData, setGeoData] = useState(null);
+  useEffect(() => {
+    axios.get('https://zulham.ahlitani.com/geo/v1/prov/12/map')
+      .then(response => {
+        console.log('API response:', response.data);
+        setGeoData(response.data.provFeature); 
+      })
+      .catch(error => {
+        console.error('Error fetching the geo data:', error);
+      });
+  }, []);
+
   return (
     <div className='mb-10'>
       {/* Full-width video container with text */}
@@ -257,7 +269,23 @@ export default function Wisata() {
           {videoPlaying ? <PiPause /> : <RxResume />}
         </button>
       </div>
-  
+
+      <div className="flex justify-center items-center mb-10" data-aos="fade-up">
+        <div className="w-3/4 lg:w-1/2">
+          {geoData ? (
+            <MapContainer center={[2.2583, 99.1957]} zoom={7} style={{ height: '500px', width: '100%' }}>
+              <TileLayer
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+              />
+              <GeoJSON data={geoData} />
+            </MapContainer>
+          ) : (
+            <p className="text-center text-lg font-semibold text-krem">Loading...</p>
+          )}
+        </div>
+      </div>
+
       {/* Change header text to "Destinations" */}
       <div className="text-center" data-aos="fade-up">
         <div className="relative inline-block mb-1">
