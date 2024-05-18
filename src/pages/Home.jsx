@@ -2,8 +2,6 @@ import "../index.css"
 import HomeVid from "../assets/Video/CinematicIndonesia.mp4"
 
 import { Link } from "react-router-dom"
-import { useEffect, useState } from "react"
-import axios from "axios"
 
 import DanauToba from "../assets/Wisata/DanauToba.jpg"
 
@@ -12,62 +10,6 @@ import LompatBatu from '../assets/Budaya/budaya.jpg'
 import Naniura from "../assets/Kuliner/Naniura.jpg"
 
 function home () {
-
-  const [translation, setTranslation] = useState({
-    welcomeText: '',
-    exploreText: ''
-  });
-
-  useEffect(() => {
-    const detectLanguageAndTranslate = async () => {
-      const encodedParams = new URLSearchParams();
-      encodedParams.set('q', 'Selamat datang di portal Djedjak Soemoet, tempat dimana keberagaman kuliner, keindahan alam, dan kekayaan budaya bersatu, memberikan Anda pengalaman yang tak hanya memanjakan lidah dan mata, tetapi juga menyentuh jiwa. Mari kita mulai petualangan yang akan menginspirasi setiap langkah Anda di tanah yang luar biasa ini.');
-
-      const options = {
-        method: 'POST',
-        url: 'https://google-translate1.p.rapidapi.com/language/translate/v2/detect',
-        headers: {
-          'content-type': 'application/x-www-form-urlencoded',
-          'X-RapidAPI-Key': '03274c2157mshdde65bcd2909846p1b6325jsn539aaaf3c06d',
-          'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com'
-        },
-        data: encodedParams,
-      };
-
-      try {
-        const response = await axios.request(options);
-        const detectedLanguage = response.data.data.detections[0][0].language;
-
-        // Translate the texts
-        const translateParams = new URLSearchParams();
-        translateParams.set('q', 'Selamat datang di portal Djedjak Soemoet, tempat dimana keberagaman kuliner, keindahan alam, dan kekayaan budaya bersatu, memberikan Anda pengalaman yang tak hanya memanjakan lidah dan mata, tetapi juga menyentuh jiwa. Mari kita mulai petualangan yang akan menginspirasi setiap langkah Anda di tanah yang luar biasa ini.');
-        translateParams.set('target', detectedLanguage);
-        translateParams.set('source', 'id');
-
-        const translateOptions = {
-          method: 'POST',
-          url: 'https://google-translate1.p.rapidapi.com/language/translate/v2',
-          headers: {
-            'content-type': 'application/x-www-form-urlencoded',
-            'X-RapidAPI-Key': '03274c2157mshdde65bcd2909846p1b6325jsn539aaaf3c06d',
-            'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com'
-          },
-          data: translateParams,
-        };
-
-        const translateResponse = await axios.request(translateOptions);
-        setTranslation({
-          welcomeText: translateResponse.data.data.translations[0].translatedText,
-          exploreText: 'Explore'
-        });
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    detectLanguageAndTranslate();
-  }, []);
-
   return (
     <div>
 
