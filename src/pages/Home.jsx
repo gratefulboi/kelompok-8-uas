@@ -17,7 +17,7 @@ function Home() {
     const fetchAirQuality = async () => {
       try {
         const response = await axios.get("https://api.openweathermap.org/data/2.5/air_pollution?lat=3.5896&lon=98.6736&appid=1f6bbc8ab1dcdd4bacb4be1694156dc5");
-        const data = response.data.list[0]; // Get the first forecast entry
+        const data = response.data.list[0];
         setAirQuality(data);
         setLoading(false);
       } catch (error) {
