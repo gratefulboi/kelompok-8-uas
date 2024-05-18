@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 import { useEffect, useState } from "react"
 import axios from "axios"
 
-import DanauToba from "../assets/Wisata/DanauToba.jpg"
+import DanauToba from "../assets/Wisata/danauToba.jpg"
 
 import LompatBatu from '../assets/Budaya/budaya.jpg'
 
