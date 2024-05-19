@@ -29,6 +29,16 @@ function Home() {
     fetchAirQuality()
   }, [])
 
+  function getAqiColorClass(aqi) {
+    if (aqi >= 1 && aqi <= 2) {
+      return "green";
+    } else if (aqi === 3) {
+      return "yellow";
+    } else if (aqi >= 4 && aqi <= 5) {
+      return "red";
+    }
+  }
+  
   return (
     <div>
       <div className="videoContainer" data-aos="zoom-out-up">
@@ -94,8 +104,8 @@ function Home() {
                   <h1 className="flex items-center justify-center text-xs lg:text-2xl">Kualitas Udara Rata-rata</h1>
                 </div>
                 
-                <div className="border-2 border-white p-5 mt-5 flex justify-center items-center cardImg  w-auto" data-aos="fade-up">
-                  <p className="text-6xl lg:text-9xl px-16 lg:px-0 text-red-800">{airQuality.main.aqi}</p>
+                <div className={"border-2 border-white p-5 mt-5 flex justify-center items-center cardImg w-auto"} data-aos="fade-up">
+                  <p className={`text-6xl lg:text-9xl px-16 lg:px-0 ${getAqiColorClass(airQuality.main.aqi)}`}>{airQuality.main.aqi}</p>
                 </div>
               </div>
 

@@ -303,3 +303,15 @@ body {
     flex-direction: column;
   }
 }
+
+.green {
+  color: #91F086;
+}
+
+.yellow {
+  color: #ece75f;
+}
+
+.red {
+  color: #991515;
+}
