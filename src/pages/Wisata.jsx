@@ -224,12 +224,11 @@ export default function Wisata() {
     const video = videoRef.current;
 
     if (video.paused) {
-      video.play(); // If video is paused, play it
-      setVideoPlaying(true); // Update videoPlaying state
+      video.play(); 
+      setVideoPlaying(true);
     } else {
-      video.pause(); // If video is playing, pause it
-      setVideoPlaying(false); // Update videoPlaying state
-      // Ensure video remains visible when paused
+      video.pause();
+      setVideoPlaying(false); 
       video.style.visibility = "visible";
     }
   };
@@ -320,7 +319,6 @@ export default function Wisata() {
           <BoxSet {...selectedDestination} />
         </Modal>
       )}        
-        // CSS styles
       {/* CSS styles */}
       <style jsx>{`
   /* General styles */
