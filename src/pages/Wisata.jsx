@@ -35,7 +35,7 @@ async function fetchWeatherData(location) {
   try {
     const response = await axios.get('https://api.weatherapi.com/v1/current.json', {
       params: {
-        key: 'd2016f8c25a140cbbca44006240805',
+        key: 'a002b28830b040cbb49140345242005',
         q: location,
       },
     });
